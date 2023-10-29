@@ -1,15 +1,19 @@
 {
   "name": "@vscode/webview-ui-toolkit",
   "version": "0.0.1",
+  "private": "false",
   "description": "A component library for building webview-based extensions in Visual Studio Code.",
+  "keywords": [
+    "vscode",
+    "visual studio code",
+    "webview",
+    "extension",
+    "ui",
+    "components",
+    "web components",
+    "react"
+  ],
   "homepage": "https://github.com/CodeEditorLand/CodeEditorLand#readme",
-  "license": "MIT",
-  "author": {
-    "name": "Nikola Hristov",
-    "email": "nikola@nikolahristov.tech",
-    "url": "https://nikolahristov.tech"
-  },
-  "type": "module",
   "bugs": {
     "url": "https://github.com/CodeEditorLand/CodeEditorLand/issues"
   },
@@ -17,11 +21,18 @@
     "type": "git",
     "url": "git+https://github.com/CodeEditorLand/CodeEditorLand.git"
   },
+  "license": "MIT",
+  "author": {
+    "name": "Nikola Hristov",
+    "email": "nikola@nikolahristov.tech",
+    "url": "https://nikolahristov.tech"
+  },
+  "publisher": "playform",
+  "sideEffects": false,
+  "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "sideEffects": false,
   "scripts": {
-    "start": "npm run test:webview",
     "build": "rollup -c && tsc -p ./tsconfig.json && npm run doc && node ./scripts/move-react-build-dir.js",
     "doc": "api-extractor run --local",
     "fmt": "prettier --config ./.prettierrc --check \"**/*.{ts,js,md}\"",
@@ -29,6 +40,7 @@
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix",
     "prepublishOnly": "TypeScriptESBuild Source/**/*.ts",
+    "start": "npm run test:webview",
     "test:webview": "npm run build && node ./scripts/setup-webview-test-env.js",
     "test:webview-react": "npm run build && node ./scripts/setup-webview-react-test-env.js"
   },
@@ -36,9 +48,6 @@
     "@microsoft/fast-element": "1.12.0",
     "@microsoft/fast-foundation": "2.49.2",
     "@microsoft/fast-react-wrapper": "0.3.20"
-  },
-  "peerDependencies": {
-    "react": ">=18.2.0"
   },
   "devDependencies": {
     "@microsoft/api-extractor": "7.38.0",
@@ -61,17 +70,9 @@
     "typescript": "5.2.2",
     "typescript-esbuild": "0.3.1"
   },
-  "keywords": [
-    "vscode",
-    "visual studio code",
-    "webview",
-    "extension",
-    "ui",
-    "components",
-    "web components",
-    "react"
-  ],
-  "private": "false",
+  "peerDependencies": {
+    "react": ">=18.2.0"
+  },
   "publishConfig": {
     "access": "public"
   }
