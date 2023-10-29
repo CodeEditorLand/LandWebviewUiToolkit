@@ -1,69 +1,78 @@
 {
-	"name": "@vscode/webview-ui-toolkit",
-	"version": "1.2.2",
-	"description": "A component library for building webview-based extensions in Visual Studio Code.",
-	"homepage": "https://github.com/microsoft/vscode-webview-ui-toolkit#readme",
-	"license": "MIT",
-	"author": "Microsoft Corporation",
-	"type": "module",
-	"bugs": {
-		"url": "https://github.com/microsoft/vscode-webview-ui-toolkit/issues"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/microsoft/vscode-webview-ui-toolkit.git"
-	},
-	"main": "dist/index.js",
-	"types": "dist/index.d.ts",
-	"sideEffects": false,
-	"scripts": {
-		"start": "npm run test:webview",
-		"build": "rollup -c && tsc -p ./tsconfig.json && npm run doc && node ./scripts/move-react-build-dir.js",
-		"doc": "api-extractor run --local",
-		"fmt": "prettier --config ./.prettierrc --check \"**/*.{ts,js,md}\"",
-		"fmt:fix": "prettier --config ./.prettierrc --write \"**/*.{ts,js,md}\"",
-		"lint": "eslint . --ext .ts",
-		"lint:fix": "eslint . --ext .ts --fix",
-		"prepublishOnly": "npm run build",
-		"test:webview": "npm run build && node ./scripts/setup-webview-test-env.js",
-		"test:webview-react": "npm run build && node ./scripts/setup-webview-react-test-env.js"
-	},
-	"dependencies": {
-		"@microsoft/fast-element": "1.12.0",
-		"@microsoft/fast-foundation": "2.49.2",
-		"@microsoft/fast-react-wrapper": "0.3.20"
-	},
-	"peerDependencies": {
-		"react": ">=18.2.0"
-	},
-	"devDependencies": {
-		"@microsoft/api-extractor": "7.38.0",
-		"@microsoft/eslint-config-fast-dna": "2.1.0",
-		"@rollup/plugin-commonjs": "25.0.7",
-		"@rollup/plugin-node-resolve": "15.2.3",
-		"@rollup/plugin-typescript": "11.1.5",
-		"@types/react": "18.2.33",
-		"@typescript-eslint/eslint-plugin": "6.9.0",
-		"eslint": "8.52.0",
-		"eslint-config-prettier": "9.0.0",
-		"eslint-plugin-import": "2.29.0",
-		"prettier": "3.0.3",
-		"rollup": "4.1.5",
-		"rollup-plugin-delete": "2.0.0",
-		"rollup-plugin-filesize": "10.0.0",
-		"rollup-plugin-terser": "7.0.2",
-		"rollup-plugin-transform-tagged-template": "0.0.3",
-		"tslib": "2.6.2",
-		"typescript": "5.2.2"
-	},
-	"keywords": [
-		"vscode",
-		"visual studio code",
-		"webview",
-		"extension",
-		"ui",
-		"components",
-		"web components",
-		"react"
-	]
+  "name": "@vscode/webview-ui-toolkit",
+  "version": "0.0.1",
+  "description": "A component library for building webview-based extensions in Visual Studio Code.",
+  "homepage": "https://github.com/CodeEditorLand/CodeEditorLand#readme",
+  "license": "MIT",
+  "author": {
+    "name": "Nikola Hristov",
+    "email": "nikola@nikolahristov.tech",
+    "url": "https://nikolahristov.tech"
+  },
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/CodeEditorLand/CodeEditorLand/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeEditorLand/CodeEditorLand.git"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "start": "npm run test:webview",
+    "build": "rollup -c && tsc -p ./tsconfig.json && npm run doc && node ./scripts/move-react-build-dir.js",
+    "doc": "api-extractor run --local",
+    "fmt": "prettier --config ./.prettierrc --check \"**/*.{ts,js,md}\"",
+    "fmt:fix": "prettier --config ./.prettierrc --write \"**/*.{ts,js,md}\"",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "prepublishOnly": "TypeScriptESBuild Source/**/*.ts",
+    "test:webview": "npm run build && node ./scripts/setup-webview-test-env.js",
+    "test:webview-react": "npm run build && node ./scripts/setup-webview-react-test-env.js"
+  },
+  "dependencies": {
+    "@microsoft/fast-element": "1.12.0",
+    "@microsoft/fast-foundation": "2.49.2",
+    "@microsoft/fast-react-wrapper": "0.3.20"
+  },
+  "peerDependencies": {
+    "react": ">=18.2.0"
+  },
+  "devDependencies": {
+    "@microsoft/api-extractor": "7.38.0",
+    "@microsoft/eslint-config-fast-dna": "2.1.0",
+    "@rollup/plugin-commonjs": "25.0.7",
+    "@rollup/plugin-node-resolve": "15.2.3",
+    "@rollup/plugin-typescript": "11.1.5",
+    "@types/react": "18.2.33",
+    "@typescript-eslint/eslint-plugin": "6.9.0",
+    "eslint": "8.52.0",
+    "eslint-config-prettier": "9.0.0",
+    "eslint-plugin-import": "2.29.0",
+    "prettier": "3.0.3",
+    "rollup": "4.1.5",
+    "rollup-plugin-delete": "2.0.0",
+    "rollup-plugin-filesize": "10.0.0",
+    "rollup-plugin-terser": "7.0.2",
+    "rollup-plugin-transform-tagged-template": "0.0.3",
+    "tslib": "2.6.2",
+    "typescript": "5.2.2",
+    "typescript-esbuild": "0.3.1"
+  },
+  "keywords": [
+    "vscode",
+    "visual studio code",
+    "webview",
+    "extension",
+    "ui",
+    "components",
+    "web components",
+    "react"
+  ],
+  "private": "false",
+  "publishConfig": {
+    "access": "public"
+  }
 }
