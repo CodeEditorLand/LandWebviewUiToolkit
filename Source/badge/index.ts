@@ -5,8 +5,8 @@ import {
 	Badge as FoundationBadge,
 	FoundationElementDefinition,
 	badgeTemplate as template,
-} from '@microsoft/fast-foundation';
-import {badgeStyles as styles} from './badge.styles.js';
+} from "@microsoft/fast-foundation";
+import { badgeStyles as styles } from "./badge.styles.js";
 
 /**
  * The Visual Studio Code badge class.
@@ -44,7 +44,7 @@ export const vsCodeBadge = Badge.compose<
 	FoundationElementDefinition,
 	typeof Badge
 >({
-	baseName: 'badge',
+	baseName: "badge",
 	template,
 	styles,
 });

@@ -5,8 +5,8 @@ import {
 	BaseProgress,
 	ProgressRingOptions,
 	progressRingTemplate as template,
-} from '@microsoft/fast-foundation';
-import {progressRingStyles as styles} from './progress-ring.styles.js';
+} from "@microsoft/fast-foundation";
+import { progressRingStyles as styles } from "./progress-ring.styles.js";
 
 /**
  * The Visual Studio Code progress ring class.
@@ -31,9 +31,9 @@ export class ProgressRing extends BaseProgress {
 		}
 
 		// Defines a default aria label that screen readers can access
-		this.setAttribute('aria-label', 'Loading');
-		this.setAttribute('aria-live', 'assertive');
-		this.setAttribute('role', 'alert');
+		this.setAttribute("aria-label", "Loading");
+		this.setAttribute("aria-live", "assertive");
+		this.setAttribute("role", "alert");
 	}
 
 	/**
@@ -51,12 +51,12 @@ export class ProgressRing extends BaseProgress {
 		oldVal: string,
 		newVal: string
 	) {
-		if (attrName === 'value') {
+		if (attrName === "value") {
 			// This will override any usage of the value attribute
 			// inherited by the FAST Foundation BaseProgress component
 			// so that VSCodeProgressRing can never set to be a
 			// determinate state
-			this.removeAttribute('value');
+			this.removeAttribute("value");
 		}
 	}
 }
@@ -73,7 +73,7 @@ export const vsCodeProgressRing = ProgressRing.compose<
 	ProgressRingOptions,
 	typeof ProgressRing
 >({
-	baseName: 'progress-ring',
+	baseName: "progress-ring",
 	template,
 	styles,
 	indeterminateIndicator: `

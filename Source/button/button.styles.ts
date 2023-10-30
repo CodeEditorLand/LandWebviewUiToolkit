@@ -1,14 +1,14 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {css} from '@microsoft/fast-element';
+import { css } from "@microsoft/fast-element";
 import {
 	ButtonOptions,
 	disabledCursor,
 	display,
 	ElementDefinitionContext,
 	focusVisible,
-} from '@microsoft/fast-foundation';
+} from "@microsoft/fast-foundation";
 import {
 	borderWidth,
 	buttonBorder,
@@ -34,7 +34,7 @@ import {
 	foreground,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
-} from '../design-tokens.js';
+} from "../design-tokens.js";
 
 /**
  * Developer note:
@@ -124,21 +124,21 @@ const BaseButtonStyles = css`
  * @internal
  */
 const PrimaryButtonStyles = css`
-	:host([appearance='primary']) {
+	:host([appearance="primary"]) {
 		background: ${buttonPrimaryBackground};
 		color: ${buttonPrimaryForeground};
 	}
-	:host([appearance='primary']:hover) {
+	:host([appearance="primary"]:hover) {
 		background: ${buttonPrimaryHoverBackground};
 	}
-	:host([appearance='primary']:active) .control:active {
+	:host([appearance="primary"]:active) .control:active {
 		background: ${buttonPrimaryBackground};
 	}
 	:host([appearance='primary']) .control:${focusVisible} {
 		outline: calc(${borderWidth} * 1px) solid ${focusBorder};
 		outline-offset: calc(${borderWidth} * 2px);
 	}
-	:host([appearance='primary'][disabled]) {
+	:host([appearance="primary"][disabled]) {
 		background: ${buttonPrimaryBackground};
 	}
 `;
@@ -147,21 +147,21 @@ const PrimaryButtonStyles = css`
  * @internal
  */
 const SecondaryButtonStyles = css`
-	:host([appearance='secondary']) {
+	:host([appearance="secondary"]) {
 		background: ${buttonSecondaryBackground};
 		color: ${buttonSecondaryForeground};
 	}
-	:host([appearance='secondary']:hover) {
+	:host([appearance="secondary"]:hover) {
 		background: ${buttonSecondaryHoverBackground};
 	}
-	:host([appearance='secondary']:active) .control:active {
+	:host([appearance="secondary"]:active) .control:active {
 		background: ${buttonSecondaryBackground};
 	}
 	:host([appearance='secondary']) .control:${focusVisible} {
 		outline: calc(${borderWidth} * 1px) solid ${focusBorder};
 		outline-offset: calc(${borderWidth} * 2px);
 	}
-	:host([appearance='secondary'][disabled]) {
+	:host([appearance="secondary"][disabled]) {
 		background: ${buttonSecondaryBackground};
 	}
 `;
@@ -170,28 +170,28 @@ const SecondaryButtonStyles = css`
  * @internal
  */
 const IconButtonStyles = css`
-	:host([appearance='icon']) {
+	:host([appearance="icon"]) {
 		background: ${buttonIconBackground};
 		border-radius: ${buttonIconCornerRadius};
 		color: ${foreground};
 	}
-	:host([appearance='icon']:hover) {
+	:host([appearance="icon"]:hover) {
 		background: ${buttonIconHoverBackground};
 		outline: 1px dotted ${contrastActiveBorder};
 		outline-offset: -1px;
 	}
-	:host([appearance='icon']) .control {
+	:host([appearance="icon"]) .control {
 		padding: ${buttonIconPadding};
 		border: none;
 	}
-	:host([appearance='icon']:active) .control:active {
+	:host([appearance="icon"]:active) .control:active {
 		background: ${buttonIconHoverBackground};
 	}
 	:host([appearance='icon']) .control:${focusVisible} {
 		outline: calc(${borderWidth} * 1px) solid ${focusBorder};
 		outline-offset: ${buttonIconFocusBorderOffset};
 	}
-	:host([appearance='icon'][disabled]) {
+	:host([appearance="icon"][disabled]) {
 		background: ${buttonIconBackground};
 	}
 `;
