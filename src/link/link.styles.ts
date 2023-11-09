@@ -1,12 +1,12 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {css} from '@microsoft/fast-element';
+import { css } from "@microsoft/fast-element";
 import {
 	display,
 	ElementDefinitionContext,
 	focusVisible,
-} from '@microsoft/fast-foundation';
+} from "@microsoft/fast-foundation";
 import {
 	borderWidth,
 	cornerRadius,
@@ -16,14 +16,14 @@ import {
 	linkForeground,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
-} from '../design-tokens.js';
-import {LinkOptions} from './index.js';
+} from "../design-tokens.js";
+import { LinkOptions } from "./index.js";
 
 export const linkStyles = (
 	context: ElementDefinitionContext,
 	definition: LinkOptions
 ) => css`
-	${display('inline-flex')} :host {
+	${display("inline-flex")} :host {
 		background: transparent;
 		box-sizing: border-box;
 		color: ${linkForeground};

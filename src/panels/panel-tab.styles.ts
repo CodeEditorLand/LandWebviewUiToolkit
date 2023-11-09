@@ -1,13 +1,13 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {css} from '@microsoft/fast-element';
+import { css } from "@microsoft/fast-element";
 import {
 	display,
 	ElementDefinitionContext,
 	focusVisible,
 	FoundationElementDefinition,
-} from '@microsoft/fast-foundation';
+} from "@microsoft/fast-foundation";
 import {
 	borderWidth,
 	cornerRadius,
@@ -18,13 +18,13 @@ import {
 	panelTabForeground,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
-} from '../design-tokens.js';
+} from "../design-tokens.js";
 
 export const panelTabStyles = (
 	context: ElementDefinitionContext,
 	definition: FoundationElementDefinition
 ) => css`
-	${display('inline-flex')} :host {
+	${display("inline-flex")} :host {
 		box-sizing: border-box;
 		font-family: ${fontFamily};
 		font-size: ${typeRampBaseFontSize};
@@ -48,17 +48,17 @@ export const panelTabStyles = (
 		color: ${panelTabActiveForeground};
 		fill: currentcolor;
 	}
-	:host([aria-selected='true']) {
+	:host([aria-selected="true"]) {
 		background: transparent;
 		color: ${panelTabActiveForeground};
 		fill: currentcolor;
 	}
-	:host([aria-selected='true']:hover) {
+	:host([aria-selected="true"]:hover) {
 		background: transparent;
 		color: ${panelTabActiveForeground};
 		fill: currentcolor;
 	}
-	:host([aria-selected='true']:active) {
+	:host([aria-selected="true"]:active) {
 		background: transparent;
 		color: ${panelTabActiveForeground};
 		fill: currentcolor;

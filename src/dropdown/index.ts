@@ -6,10 +6,10 @@ import {
 	Select as FoundationSelect,
 	SelectOptions,
 	selectTemplate as template,
-} from '@microsoft/fast-foundation';
-import {dropdownStyles as styles} from './dropdown.styles.js';
+} from "@microsoft/fast-foundation";
+import { dropdownStyles as styles } from "./dropdown.styles.js";
 
-export {DropdownPosition};
+export { DropdownPosition };
 
 /**
  * Dropdown configuration options
@@ -36,7 +36,7 @@ export const vsCodeDropdown = Dropdown.compose<
 	DropdownOptions,
 	typeof Dropdown
 >({
-	baseName: 'dropdown',
+	baseName: "dropdown",
 	template,
 	styles,
 	indicator: `

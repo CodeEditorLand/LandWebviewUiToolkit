@@ -1,12 +1,12 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {css} from '@microsoft/fast-element';
+import { css } from "@microsoft/fast-element";
 import {
 	display,
 	ElementDefinitionContext,
 	FoundationElementDefinition,
-} from '@microsoft/fast-foundation';
+} from "@microsoft/fast-foundation";
 import {
 	badgeBackground,
 	badgeForeground,
@@ -17,13 +17,13 @@ import {
 	tagCornerRadius,
 	typeRampMinus1FontSize,
 	typeRampMinus1LineHeight,
-} from '../design-tokens.js';
+} from "../design-tokens.js";
 
 export const tagStyles = (
 	context: ElementDefinitionContext,
 	definition: FoundationElementDefinition
 ) => css`
-	${display('inline-block')} :host {
+	${display("inline-block")} :host {
 		box-sizing: border-box;
 		font-family: ${fontFamily};
 		font-size: ${typeRampMinus1FontSize};

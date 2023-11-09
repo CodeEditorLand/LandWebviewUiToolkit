@@ -1,8 +1,8 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {CSSDesignToken} from '@microsoft/fast-foundation';
-import type {T} from '../design-tokens/create.js';
+import { CSSDesignToken } from "@microsoft/fast-foundation";
+import type { T } from "../design-tokens/create.js";
 
 /**
  * Configures a MutationObserver to watch for Visual Studio Code theme changes and
@@ -11,13 +11,13 @@ import type {T} from '../design-tokens/create.js';
 export function initThemeChangeListener(
 	tokenMappings: Map<string, CSSDesignToken<T>>
 ) {
-	window.addEventListener('load', () => {
+	window.addEventListener("load", () => {
 		const observer = new MutationObserver(() => {
 			applyCurrentTheme(tokenMappings);
 		});
 		observer.observe(document.body, {
 			attributes: true,
-			attributeFilter: ['class'],
+			attributeFilter: ["class"],
 		});
 
 		applyCurrentTheme(tokenMappings);
@@ -32,15 +32,15 @@ function applyCurrentTheme(tokenMappings: Map<string, CSSDesignToken<T>>) {
 	// Importantly this includes all the CSS variables associated with the
 	// current Visual Studio Code theme
 	const styles = getComputedStyle(document.body);
-	const body = document.querySelector('body');
+	const body = document.querySelector("body");
 
 	if (body) {
-		const themeKind = body.getAttribute('data-vscode-theme-kind');
+		const themeKind = body.getAttribute("data-vscode-theme-kind");
 		for (const [vscodeTokenName, toolkitToken] of tokenMappings) {
 			let value = styles.getPropertyValue(vscodeTokenName).toString();
 
 			// Handle a couple of styling edge cases when a high contrast theme is applied
-			if (themeKind === 'vscode-high-contrast') {
+			if (themeKind === "vscode-high-contrast") {
 				// Developer note:
 				//
 				// There are a handful of VS Code theme tokens that have no value when a high
@@ -55,38 +55,38 @@ function applyCurrentTheme(tokenMappings: Map<string, CSSDesignToken<T>>) {
 				// tokens, then overrides their value to be transparent.
 				if (
 					value.length === 0 &&
-					toolkitToken.name.includes('background')
+					toolkitToken.name.includes("background")
 				) {
-					value = 'transparent';
+					value = "transparent";
 				}
 
 				// Set icon button hover to be transparent in high contrast themes
-				if (toolkitToken.name === 'button-icon-hover-background') {
-					value = 'transparent';
+				if (toolkitToken.name === "button-icon-hover-background") {
+					value = "transparent";
 				}
-			} else if (themeKind === 'vscode-high-contrast-light') {
+			} else if (themeKind === "vscode-high-contrast-light") {
 				if (
 					value.length === 0 &&
-					toolkitToken.name.includes('background')
+					toolkitToken.name.includes("background")
 				) {
 					// Set button variant hover backgrounds to correct values based on VS Code core source:
 					// https://github.com/microsoft/vscode/blob/fd0ee4f77e354de10ae591c9e97fe5ad41b398fc/src/vs/platform/theme/common/colorRegistry.ts#L270-L276
 					switch (toolkitToken.name) {
-						case 'button-primary-hover-background':
-							value = '#0F4A85';
+						case "button-primary-hover-background":
+							value = "#0F4A85";
 							break;
-						case 'button-secondary-hover-background':
-							value = 'transparent';
+						case "button-secondary-hover-background":
+							value = "transparent";
 							break;
-						case 'button-icon-hover-background':
-							value = 'transparent';
+						case "button-icon-hover-background":
+							value = "transparent";
 							break;
 					}
 				}
 			} else {
 				// Set contrast-active-border token to be transparent in non-high-contrast themes
-				if (toolkitToken.name === 'contrast-active-border') {
-					value = 'transparent';
+				if (toolkitToken.name === "contrast-active-border") {
+					value = "transparent";
 				}
 			}
 
