@@ -40,8 +40,8 @@
 	},
 	"dependencies": {
 		"@microsoft/fast-element": "1.12.0",
-		"@microsoft/fast-foundation": "2.49.3",
-		"@microsoft/fast-react-wrapper": "0.3.21"
+		"@microsoft/fast-foundation": "2.49.4",
+		"@microsoft/fast-react-wrapper": "0.3.22"
 	},
 	"devDependencies": {
 		"@microsoft/api-extractor": "7.38.2",
