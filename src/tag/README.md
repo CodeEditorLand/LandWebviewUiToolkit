@@ -1,7 +1,6 @@
 # Visual Studio Code Tag
 
-The `vscode-tag` component is used to label an item, attract attention, and/or
-flag status.
+The `vscode-tag` component is used to label an item, attract attention, and/or flag status.
 
 ![Tag hero](/docs/assets/images/tag-hero.png)
 

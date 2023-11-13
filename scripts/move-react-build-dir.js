@@ -1,9 +1,9 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import { copyDir, color, delDir } from "./helpers.js";
-import process from "process";
-import { readFile, writeFile } from "fs/promises";
+import {copyDir, color, delDir} from './helpers.js';
+import process from 'process';
+import {readFile, writeFile} from 'fs/promises';
 
 /**
  * Developer note:
@@ -42,65 +42,47 @@ import { readFile, writeFile } from "fs/promises";
 async function main() {
 	// Move the React build directory out of dist and into the project root
 	try {
-		console.log(color(["dim"], "\nMoving React build into root..."));
+		console.log(color(['dim'], '\nMoving React build into root...'));
 		// Delete the root react directory if it already exists
-		delDir("./react");
+		delDir('./react');
 		// Copy React build directory into root
-		copyDir("./dist/react", "./");
+		copyDir('./dist/react', './');
 		// Delete React build directory in dist
-		delDir("./dist/react");
+		delDir('./dist/react');
 	} catch (err) {
-		console.log(
-			`${color(
-				["red"],
-				"Error: Moving the React build directory into the project root failed."
-			)}\n    ${err}`
-		);
+		console.log(`${color(['red'], 'Error: Moving the React build directory into the project root failed.')}\n    ${err}`);
 		process.exit();
 	}
 
 	// Update import paths in the React build files to reflect new location
-	console.log(color(["dim"], "Updating React build import paths..."));
-	await updateReactBuildImportPaths("./react/index.js");
-	await updateReactBuildImportPaths("./react/index.d.ts");
+	console.log(color(['dim'], 'Updating React build import paths...'));
+	await updateReactBuildImportPaths('./react/index.js');
+	await updateReactBuildImportPaths('./react/index.d.ts');
 
-	console.log(color(["bold", "green"], "\nBuild complete!"));
+	console.log(color(['bold', 'green'], '\nBuild complete!'));
 }
 
 async function updateReactBuildImportPaths(path) {
-	let result = "";
+	let result = '';
 
 	// Read React build file and update import paths if appropriate
 	try {
-		const fileContents = await readFile(path, { encoding: "utf8" });
+		const fileContents = await readFile(path, {encoding: 'utf8'});
 		// These regex strings rely on an assumption that they will not change
 		// If importing React components from the toolkit starts to break check here first
-		result = fileContents.replace(/\.\.\/index/g, "../dist/index");
-		result = result.replace(
-			/\.\.\/vscode-design-system/g,
-			"../dist/vscode-design-system"
-		);
+		result = fileContents.replace(/\.\.\/index/g, '../dist/index');
+		result = result.replace(/\.\.\/vscode-design-system/g, '../dist/vscode-design-system');
 		result = result.replace(/Pick<import\("\.\.\//g, 'Pick<import("../');
 	} catch (err) {
-		console.log(
-			`${color(
-				["red"],
-				"Error: Reading and updating React build file import paths failed."
-			)}\n    ${err}`
-		);
+		console.log(`${color(['red'], 'Error: Reading and updating React build file import paths failed.')}\n    ${err}`);
 		process.exit();
 	}
 
 	// Overwrite React build file with any updated import paths
 	try {
-		await writeFile(path, result, { encoding: "utf8" });
+		await writeFile(path, result, {encoding: 'utf8'});
 	} catch (err) {
-		console.log(
-			`${color(
-				["red"],
-				"Error: Writing new React build file import paths failed."
-			)}\n    ${err}`
-		);
+		console.log(`${color(['red'], 'Error: Writing new React build file import paths failed.')}\n    ${err}`);
 		process.exit();
 	}
 }

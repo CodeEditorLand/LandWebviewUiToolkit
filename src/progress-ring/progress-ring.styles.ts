@@ -1,19 +1,19 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import { css } from "@microsoft/fast-element";
+import {css} from '@microsoft/fast-element';
 import {
 	display,
 	ElementDefinitionContext,
 	ProgressRingOptions,
-} from "@microsoft/fast-foundation";
-import { designUnit, progressBackground } from "../design-tokens.js";
+} from '@microsoft/fast-foundation';
+import {designUnit, progressBackground} from '../design-tokens.js';
 
 export const progressRingStyles = (
 	context: ElementDefinitionContext,
 	definition: ProgressRingOptions
 ) => css`
-	${display("flex")} :host {
+	${display('flex')} :host {
 		align-items: center;
 		outline: none;
 		height: calc(${designUnit} * 7px);

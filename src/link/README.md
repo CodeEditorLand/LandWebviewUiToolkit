@@ -1,7 +1,6 @@
 # Visual Studio Code Link
 
-The `vscode-link` is a web component implementation of an
-[anchor element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a).
+The `vscode-link` is a web component implementation of an [anchor element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a).
 
 ![Link hero](/docs/assets/images/link-hero.png)
 
@@ -43,8 +42,5 @@ The `vscode-link` is a web component implementation of an
 ### Inline Link
 
 ```html
-<p>
-	An <vscode-link href="#">inline link</vscode-link> that is a part of a
-	sentence.
-</p>
+<p>An <vscode-link href="#">inline link</vscode-link> that is a part of a sentence.</p>
 ```

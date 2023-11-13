@@ -1,14 +1,14 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import { css } from "@microsoft/fast-element";
+import {css} from '@microsoft/fast-element';
 import {
 	disabledCursor,
 	display,
 	ElementDefinitionContext,
 	focusVisible,
 	TextFieldOptions,
-} from "@microsoft/fast-foundation";
+} from '@microsoft/fast-foundation';
 import {
 	borderWidth,
 	cornerRadiusRound,
@@ -24,13 +24,13 @@ import {
 	inputMinWidth,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
-} from "../design-tokens.js";
+} from '../design-tokens.js';
 
 export const textFieldStyles = (
 	context: ElementDefinitionContext,
 	definition: TextFieldOptions
 ) => css`
-	${display("inline-block")} :host {
+	${display('inline-block')} :host {
 		font-family: ${fontFamily};
 		outline: none;
 		user-select: none;

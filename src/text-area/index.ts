@@ -6,10 +6,10 @@ import {
 	TextArea as FoundationTextArea,
 	textAreaTemplate as template,
 	TextAreaResize,
-} from "@microsoft/fast-foundation";
-import { textAreaStyles as styles } from "./text-area.styles.js";
+} from '@microsoft/fast-foundation';
+import {textAreaStyles as styles} from './text-area.styles.js';
 
-export { TextAreaResize };
+export {TextAreaResize};
 
 /**
  * The Visual Studio Code text area class.
@@ -29,10 +29,10 @@ export class TextArea extends FoundationTextArea {
 	public connectedCallback() {
 		super.connectedCallback();
 		if (this.textContent) {
-			this.setAttribute("aria-label", this.textContent);
+			this.setAttribute('aria-label', this.textContent);
 		} else {
 			// Describe the generic component if no label is provided
-			this.setAttribute("aria-label", "Text area");
+			this.setAttribute('aria-label', 'Text area');
 		}
 	}
 }
@@ -49,7 +49,7 @@ export const vsCodeTextArea = TextArea.compose<
 	FoundationElementDefinition,
 	typeof TextArea
 >({
-	baseName: "text-area",
+	baseName: 'text-area',
 	template,
 	styles,
 	shadowOptions: {

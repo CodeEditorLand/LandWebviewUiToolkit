@@ -1,8 +1,8 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import { provideReactWrapper } from "@microsoft/fast-react-wrapper";
-import React from "react";
+import {provideReactWrapper} from '@microsoft/fast-react-wrapper';
+import React from 'react';
 import {
 	vsCodeBadge,
 	vsCodeButton,
@@ -23,11 +23,11 @@ import {
 	vsCodeTag,
 	vsCodeTextArea,
 	vsCodeTextField,
-} from "../index.js";
+} from '../index.js';
 
-import { provideVSCodeDesignSystem } from "../vscode-design-system.js";
+import {provideVSCodeDesignSystem} from '../vscode-design-system.js';
 
-const { wrap } = provideReactWrapper(React, provideVSCodeDesignSystem());
+const {wrap} = provideReactWrapper(React, provideVSCodeDesignSystem());
 
 /**
  * VS Code Badge React component.
@@ -35,7 +35,7 @@ const { wrap } = provideReactWrapper(React, provideVSCodeDesignSystem());
  * @public
  */
 export const VSCodeBadge = wrap(vsCodeBadge(), {
-	name: "vscode-badge",
+	name: 'vscode-badge',
 });
 
 /**
@@ -44,7 +44,7 @@ export const VSCodeBadge = wrap(vsCodeBadge(), {
  * @public
  */
 export const VSCodeButton = wrap(vsCodeButton(), {
-	name: "vscode-button",
+	name: 'vscode-button',
 });
 
 /**
@@ -53,9 +53,9 @@ export const VSCodeButton = wrap(vsCodeButton(), {
  * @public
  */
 export const VSCodeCheckbox = wrap(vsCodeCheckbox(), {
-	name: "vscode-checkbox",
+	name: 'vscode-checkbox',
 	events: {
-		onChange: "change",
+		onChange: 'change',
 	},
 });
 
@@ -65,7 +65,7 @@ export const VSCodeCheckbox = wrap(vsCodeCheckbox(), {
  * @public
  */
 export const VSCodeDataGrid = wrap(vsCodeDataGrid(), {
-	name: "vscode-data-grid",
+	name: 'vscode-data-grid',
 });
 
 /**
@@ -74,7 +74,7 @@ export const VSCodeDataGrid = wrap(vsCodeDataGrid(), {
  * @public
  */
 export const VSCodeDataGridCell = wrap(vsCodeDataGridCell(), {
-	name: "vscode-data-grid-cell",
+	name: 'vscode-data-grid-cell',
 });
 
 /**
@@ -83,7 +83,7 @@ export const VSCodeDataGridCell = wrap(vsCodeDataGridCell(), {
  * @public
  */
 export const VSCodeDataGridRow = wrap(vsCodeDataGridRow(), {
-	name: "vscode-data-grid-row",
+	name: 'vscode-data-grid-row',
 });
 
 /**
@@ -92,7 +92,7 @@ export const VSCodeDataGridRow = wrap(vsCodeDataGridRow(), {
  * @public
  */
 export const VSCodeDivider = wrap(vsCodeDivider(), {
-	name: "vscode-divider",
+	name: 'vscode-divider',
 });
 
 /**
@@ -101,9 +101,9 @@ export const VSCodeDivider = wrap(vsCodeDivider(), {
  * @public
  */
 export const VSCodeDropdown = wrap(vsCodeDropdown(), {
-	name: "vscode-dropdown",
+	name: 'vscode-dropdown',
 	events: {
-		onChange: "change",
+		onChange: 'change',
 	},
 });
 
@@ -113,7 +113,7 @@ export const VSCodeDropdown = wrap(vsCodeDropdown(), {
  * @public
  */
 export const VSCodeLink = wrap(vsCodeLink(), {
-	name: "vscode-link",
+	name: 'vscode-link',
 });
 
 /**
@@ -122,7 +122,7 @@ export const VSCodeLink = wrap(vsCodeLink(), {
  * @public
  */
 export const VSCodeOption = wrap(vsCodeOption(), {
-	name: "vscode-option",
+	name: 'vscode-option',
 });
 
 /**
@@ -131,9 +131,9 @@ export const VSCodeOption = wrap(vsCodeOption(), {
  * @public
  */
 export const VSCodePanels = wrap(vsCodePanels(), {
-	name: "vscode-panels",
+	name: 'vscode-panels',
 	events: {
-		onChange: "change",
+		onChange: 'change',
 	},
 });
 
@@ -143,7 +143,7 @@ export const VSCodePanels = wrap(vsCodePanels(), {
  * @public
  */
 export const VSCodePanelTab = wrap(vsCodePanelTab(), {
-	name: "vscode-panel-tab",
+	name: 'vscode-panel-tab',
 });
 
 /**
@@ -152,7 +152,7 @@ export const VSCodePanelTab = wrap(vsCodePanelTab(), {
  * @public
  */
 export const VSCodePanelView = wrap(vsCodePanelView(), {
-	name: "vscode-panel-view",
+	name: 'vscode-panel-view',
 });
 
 /**
@@ -161,7 +161,7 @@ export const VSCodePanelView = wrap(vsCodePanelView(), {
  * @public
  */
 export const VSCodeProgressRing = wrap(vsCodeProgressRing(), {
-	name: "vscode-progress-ring",
+	name: 'vscode-progress-ring',
 });
 
 /**
@@ -170,9 +170,9 @@ export const VSCodeProgressRing = wrap(vsCodeProgressRing(), {
  * @public
  */
 export const VSCodeRadio = wrap(vsCodeRadio(), {
-	name: "vscode-radio",
+	name: 'vscode-radio',
 	events: {
-		onChange: "change",
+		onChange: 'change',
 	},
 });
 
@@ -182,9 +182,9 @@ export const VSCodeRadio = wrap(vsCodeRadio(), {
  * @public
  */
 export const VSCodeRadioGroup = wrap(vsCodeRadioGroup(), {
-	name: "vscode-radio-group",
+	name: 'vscode-radio-group',
 	events: {
-		onChange: "change",
+		onChange: 'change',
 	},
 });
 
@@ -194,7 +194,7 @@ export const VSCodeRadioGroup = wrap(vsCodeRadioGroup(), {
  * @public
  */
 export const VSCodeTag = wrap(vsCodeTag(), {
-	name: "vscode-tag",
+	name: 'vscode-tag',
 });
 
 /**
@@ -203,10 +203,10 @@ export const VSCodeTag = wrap(vsCodeTag(), {
  * @public
  */
 export const VSCodeTextArea = wrap(vsCodeTextArea(), {
-	name: "vscode-text-area",
+	name: 'vscode-text-area',
 	events: {
-		onChange: "change",
-		onInput: "input",
+		onChange: 'change',
+		onInput: 'input',
 	},
 });
 
@@ -216,9 +216,9 @@ export const VSCodeTextArea = wrap(vsCodeTextArea(), {
  * @public
  */
 export const VSCodeTextField = wrap(vsCodeTextField(), {
-	name: "vscode-text-field",
+	name: 'vscode-text-field',
 	events: {
-		onChange: "change",
-		onInput: "input",
+		onChange: 'change',
+		onInput: 'input',
 	},
 });
