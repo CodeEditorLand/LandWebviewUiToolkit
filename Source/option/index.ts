@@ -5,8 +5,8 @@ import {
 	ListboxOption as FoundationListboxOption,
 	ListboxOptionOptions,
 	listboxOptionTemplate as template,
-} from "@microsoft/fast-foundation";
-import { optionStyles as styles } from "./option.styles.js";
+} from '@microsoft/fast-foundation';
+import {optionStyles as styles} from './option.styles.js';
 
 /**
  * Dropdown option configuration options
@@ -29,10 +29,10 @@ export class Option extends FoundationListboxOption {
 	public connectedCallback() {
 		super.connectedCallback();
 		if (this.textContent) {
-			this.setAttribute("aria-label", this.textContent);
+			this.setAttribute('aria-label', this.textContent);
 		} else {
 			// Fallback to the label if there is no text content
-			this.setAttribute("aria-label", "Option");
+			this.setAttribute('aria-label', 'Option');
 		}
 	}
 }
@@ -46,7 +46,7 @@ export class Option extends FoundationListboxOption {
  * @public
  */
 export const vsCodeOption = Option.compose<OptionOptions, typeof Option>({
-	baseName: "option",
+	baseName: 'option',
 	template,
 	styles,
 });

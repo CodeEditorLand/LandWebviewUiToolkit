@@ -6,10 +6,10 @@ import {
 	Divider as FoundationDivider,
 	FoundationElementDefinition,
 	dividerTemplate as template,
-} from "@microsoft/fast-foundation";
-import { dividerStyles as styles } from "./divider.styles.js";
+} from '@microsoft/fast-foundation';
+import {dividerStyles as styles} from './divider.styles.js';
 
-export { DividerRole };
+export {DividerRole};
 
 /**
  * The Visual Studio Code divider class.
@@ -30,7 +30,7 @@ export const vsCodeDivider = Divider.compose<
 	FoundationElementDefinition,
 	typeof Divider
 >({
-	baseName: "divider",
+	baseName: 'divider',
 	template,
 	styles,
 });

@@ -1,12 +1,12 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import { css } from "@microsoft/fast-element";
+import {css} from '@microsoft/fast-element';
 import {
 	display,
 	ElementDefinitionContext,
 	FoundationElementDefinition,
-} from "@microsoft/fast-foundation";
+} from '@microsoft/fast-foundation';
 import {
 	cornerRadius,
 	designUnit,
@@ -15,13 +15,13 @@ import {
 	panelTabActiveForeground,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
-} from "../design-tokens.js";
+} from '../design-tokens.js';
 
 export const panelsStyles = (
 	context: ElementDefinitionContext,
 	definition: FoundationElementDefinition
 ) => css`
-	${display("grid")} :host {
+	${display('grid')} :host {
 		box-sizing: border-box;
 		font-family: ${fontFamily};
 		font-size: ${typeRampBaseFontSize};

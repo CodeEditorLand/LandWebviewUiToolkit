@@ -1,7 +1,6 @@
 # Visual Studio Code Divider
 
-The `vscode-divider` is a web component implementation of a
-[horizontal rule element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr).
+The `vscode-divider` is a web component implementation of a [horizontal rule element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr).
 
 ![Divider hero](/docs/assets/images/divider-hero.png)
 
@@ -35,14 +34,11 @@ The `vscode-divider` is a web component implementation of a
 
 ### Role Attribute
 
-The role attribute determines the semantic meaning (or lack there of) of a
-Visual Studio Code Divider. The two options are `separator` and `presentation`.
+The role attribute determines the semantic meaning (or lack there of) of a Visual Studio Code Divider. The two options are `separator` and `presentation`.
 
-The `separator` option is the default value and indicates that the divider
-semantically separates content.
+The `separator` option is the default value and indicates that the divider semantically separates content.
 
-The `presentation` option indicates that the divider has no semantic value and
-is for visual presentation only.
+The `presentation` option indicates that the divider has no semantic value and is for visual presentation only.
 
 ```html
 <!-- Indicates that the divider semantically separates content -->

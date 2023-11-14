@@ -1,7 +1,6 @@
 # Visual Studio Code Badge
 
-The `vscode-badge` component is used to highlight an item, attract attention,
-and/or flag status.
+The `vscode-badge` component is used to highlight an item, attract attention, and/or flag status.
 
 ![Badge hero](/docs/assets/images/badge-hero.png)
 

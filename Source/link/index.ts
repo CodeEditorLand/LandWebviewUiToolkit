@@ -5,8 +5,8 @@ import {
 	AnchorOptions,
 	Anchor as FoundationAnchor,
 	anchorTemplate as template,
-} from "@microsoft/fast-foundation";
-import { linkStyles as styles } from "./link.styles.js";
+} from '@microsoft/fast-foundation';
+import {linkStyles as styles} from './link.styles.js';
 
 /**
  * Link configuration options
@@ -30,7 +30,7 @@ export class Link extends FoundationAnchor {}
  * @public
  */
 export const vsCodeLink = Link.compose<LinkOptions, typeof Link>({
-	baseName: "link",
+	baseName: 'link',
 	template,
 	styles,
 	shadowOptions: {
