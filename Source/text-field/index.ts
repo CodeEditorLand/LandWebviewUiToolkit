@@ -6,10 +6,10 @@ import {
 	textFieldTemplate as template,
 	TextFieldOptions,
 	TextFieldType,
-} from '@microsoft/fast-foundation';
-import {textFieldStyles as styles} from './text-field.styles.js';
+} from "@microsoft/fast-foundation";
+import { textFieldStyles as styles } from "./text-field.styles.js";
 
-export {TextFieldType};
+export { TextFieldType };
 
 /**
  * The Visual Studio Code text field class.
@@ -26,10 +26,10 @@ export class TextField extends FoundationTextField {
 	public connectedCallback() {
 		super.connectedCallback();
 		if (this.textContent) {
-			this.setAttribute('aria-label', this.textContent);
+			this.setAttribute("aria-label", this.textContent);
 		} else {
 			// Describe the generic component if no label is provided
-			this.setAttribute('aria-label', 'Text field');
+			this.setAttribute("aria-label", "Text field");
 		}
 	}
 }
@@ -46,7 +46,7 @@ export const vsCodeTextField = TextField.compose<
 	TextFieldOptions,
 	typeof TextField
 >({
-	baseName: 'text-field',
+	baseName: "text-field",
 	template,
 	styles,
 	shadowOptions: {

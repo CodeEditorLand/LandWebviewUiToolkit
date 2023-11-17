@@ -1,6 +1,7 @@
 # Visual Studio Code Progress Ring
 
-The `vscode-progress-ring` component is used to indicate an indeterminate loading state.
+The `vscode-progress-ring` component is used to indicate an indeterminate
+loading state.
 
 ![Progress ring hero](/docs/assets/images/progress-ring-hero.png)
 
@@ -26,7 +27,8 @@ None
 
 ### Basic Progress Ring
 
-The progress ring displays a looping animation to indicate an indeterminate state where the wait time is unspecified.
+The progress ring displays a looping animation to indicate an indeterminate
+state where the wait time is unspecified.
 
 ```html
 <vscode-progress-ring></vscode-progress-ring>

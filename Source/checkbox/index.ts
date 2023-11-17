@@ -5,8 +5,8 @@ import {
 	CheckboxOptions,
 	Checkbox as FoundationCheckbox,
 	checkboxTemplate as template,
-} from '@microsoft/fast-foundation';
-import {checkboxStyles as styles} from './checkbox.styles.js';
+} from "@microsoft/fast-foundation";
+import { checkboxStyles as styles } from "./checkbox.styles.js";
 
 /**
  * The Visual Studio Code checkbox class.
@@ -23,10 +23,10 @@ export class Checkbox extends FoundationCheckbox {
 	public connectedCallback() {
 		super.connectedCallback();
 		if (this.textContent) {
-			this.setAttribute('aria-label', this.textContent);
+			this.setAttribute("aria-label", this.textContent);
 		} else {
 			// Fallback to the label if there is no text content
-			this.setAttribute('aria-label', 'Checkbox');
+			this.setAttribute("aria-label", "Checkbox");
 		}
 	}
 }
@@ -43,7 +43,7 @@ export const vsCodeCheckbox = Checkbox.compose<
 	CheckboxOptions,
 	typeof Checkbox
 >({
-	baseName: 'checkbox',
+	baseName: "checkbox",
 	template,
 	styles,
 	checkedIndicator: `

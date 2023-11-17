@@ -5,8 +5,8 @@ import {
 	Radio as FoundationRadio,
 	RadioOptions,
 	radioTemplate as template,
-} from '@microsoft/fast-foundation';
-import {radioStyles as styles} from './radio.styles.js';
+} from "@microsoft/fast-foundation";
+import { radioStyles as styles } from "./radio.styles.js";
 
 /**
  * The Visual Studio Code radio class.
@@ -23,10 +23,10 @@ export class Radio extends FoundationRadio {
 	public connectedCallback() {
 		super.connectedCallback();
 		if (this.textContent) {
-			this.setAttribute('aria-label', this.textContent);
+			this.setAttribute("aria-label", this.textContent);
 		} else {
 			// Fallback to the label if there is no text content
-			this.setAttribute('aria-label', 'Radio');
+			this.setAttribute("aria-label", "Radio");
 		}
 	}
 }
@@ -40,7 +40,7 @@ export class Radio extends FoundationRadio {
  * @public
  */
 export const vsCodeRadio = Radio.compose<RadioOptions, typeof Radio>({
-	baseName: 'radio',
+	baseName: "radio",
 	template,
 	styles,
 	checkedIndicator: `

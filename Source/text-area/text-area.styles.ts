@@ -1,14 +1,14 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {css} from '@microsoft/fast-element';
+import { css } from "@microsoft/fast-element";
 import {
 	disabledCursor,
 	display,
 	ElementDefinitionContext,
 	focusVisible,
 	FoundationElementDefinition,
-} from '@microsoft/fast-foundation';
+} from "@microsoft/fast-foundation";
 import {
 	borderWidth,
 	cornerRadiusRound,
@@ -28,13 +28,13 @@ import {
 	scrollbarWidth,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
-} from '../design-tokens.js';
+} from "../design-tokens.js";
 
 export const textAreaStyles = (
 	context: ElementDefinitionContext,
 	definition: FoundationElementDefinition
 ) => css`
-	${display('inline-block')} :host {
+	${display("inline-block")} :host {
 		font-family: ${fontFamily};
 		outline: none;
 		user-select: none;
@@ -87,13 +87,13 @@ export const textAreaStyles = (
 	:host(:focus-within:not([disabled])) .control {
 		border-color: ${focusBorder};
 	}
-	:host([resize='both']) .control {
+	:host([resize="both"]) .control {
 		resize: both;
 	}
-	:host([resize='horizontal']) .control {
+	:host([resize="horizontal"]) .control {
 		resize: horizontal;
 	}
-	:host([resize='vertical']) .control {
+	:host([resize="vertical"]) .control {
 		resize: vertical;
 	}
 	.label {
