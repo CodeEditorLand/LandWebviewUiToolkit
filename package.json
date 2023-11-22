@@ -1,27 +1,23 @@
 {
 	"name": "@vscode/webview-ui-toolkit",
-	"version": "1.3.1",
+	"version": "0.0.1",
+	"private": "false",
 	"description": "A component library for building webview-based extensions in Visual Studio Code.",
-	"keywords": [
-		"vscode",
-		"visual studio code",
-		"webview",
-		"extension",
-		"ui",
-		"components",
-		"web components",
-		"react"
-	],
-	"homepage": "https://github.com/microsoft/vscode-webview-ui-toolkit#readme",
+	"homepage": "https://github.com/CodeEditorLand/CodeEditorLand#readme",
 	"bugs": {
-		"url": "https://github.com/microsoft/vscode-webview-ui-toolkit/issues"
+		"url": "https://github.com/CodeEditorLand/CodeEditorLand/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/microsoft/vscode-webview-ui-toolkit.git"
+		"url": "git+https://github.com/CodeEditorLand/CodeEditorLand.git"
 	},
 	"license": "MIT",
-	"author": "Microsoft Corporation",
+	"author": {
+		"name": "Nikola Hristov",
+		"email": "nikola@nikolahristov.tech",
+		"url": "https://nikolahristov.tech"
+	},
+	"publisher": "playform",
 	"sideEffects": false,
 	"type": "module",
 	"main": "dist/index.js",
@@ -33,7 +29,7 @@
 		"fmt:fix": "prettier --config ./.prettierrc --write \"**/*.{ts,js,md}\"",
 		"lint": "eslint . --ext .ts",
 		"lint:fix": "eslint . --ext .ts --fix",
-		"prepublishOnly": "npm run build",
+		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'",
 		"start": "npm run test:webview",
 		"test:webview": "npm run build && node ./scripts/setup-webview-test-env.js",
 		"test:webview-react": "npm run build && node ./scripts/setup-webview-react-test-env.js"
@@ -49,20 +45,23 @@
 		"@rollup/plugin-commonjs": "25.0.7",
 		"@rollup/plugin-node-resolve": "15.2.3",
 		"@rollup/plugin-typescript": "11.1.5",
-		"@types/react": "18.2.37",
-		"@typescript-eslint/eslint-plugin": "6.11.0",
-		"eslint": "8.54.0",
+		"@types/react": "18.2.38",
+		"@typescript-eslint/eslint-plugin": "6.12.0",
 		"eslint-config-prettier": "9.0.0",
 		"eslint-plugin-import": "2.29.0",
-		"rollup": "4.5.0",
+		"rollup": "4.5.1",
 		"rollup-plugin-delete": "2.0.0",
 		"rollup-plugin-filesize": "10.0.0",
 		"rollup-plugin-terser": "7.0.2",
 		"rollup-plugin-transform-tagged-template": "0.0.3",
 		"tslib": "2.6.2",
-		"typescript": "5.2.2"
+		"typescript": "5.3.2",
+		"typescript-esbuild": "0.3.1"
 	},
 	"peerDependencies": {
 		"react": ">=18.2.0"
+	},
+	"publishConfig": {
+		"access": "public"
 	}
 }
