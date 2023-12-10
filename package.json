@@ -40,22 +40,22 @@
 		"@microsoft/fast-react-wrapper": "0.3.22"
 	},
 	"devDependencies": {
-		"@microsoft/api-extractor": "7.38.3",
+		"@microsoft/api-extractor": "7.38.5",
 		"@microsoft/eslint-config-fast-dna": "2.1.0",
 		"@rollup/plugin-commonjs": "25.0.7",
 		"@rollup/plugin-node-resolve": "15.2.3",
 		"@rollup/plugin-typescript": "11.1.5",
-		"@types/react": "18.2.41",
-		"@typescript-eslint/eslint-plugin": "6.13.1",
+		"@types/react": "18.2.43",
+		"@typescript-eslint/eslint-plugin": "6.13.2",
 		"eslint-config-prettier": "9.1.0",
 		"eslint-plugin-import": "2.29.0",
-		"rollup": "4.6.1",
+		"rollup": "4.7.0",
 		"rollup-plugin-delete": "2.0.0",
 		"rollup-plugin-filesize": "10.0.0",
 		"rollup-plugin-terser": "7.0.2",
 		"rollup-plugin-transform-tagged-template": "0.0.3",
 		"tslib": "2.6.2",
-		"typescript": "5.3.2",
+		"typescript": "5.3.3",
 		"typescript-esbuild": "0.3.2"
 	},
 	"peerDependencies": {
