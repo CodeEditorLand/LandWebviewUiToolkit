@@ -1,21 +1,36 @@
 {
-  "name": "@vscode/webview-ui-toolkit",
-  "version": "1.4.0",
-  "description": "A component library for building webview-based extensions in Visual Studio Code.",
-  "homepage": "https://github.com/microsoft/vscode-webview-ui-toolkit#readme",
+  "author": "Microsoft Corporation",
   "bugs": {
     "url": "https://github.com/microsoft/vscode-webview-ui-toolkit/issues"
   },
+  "dependencies": {
+    "@microsoft/fast-element": "1.12.0",
+    "@microsoft/fast-foundation": "2.49.4",
+    "@microsoft/fast-react-wrapper": "0.3.22",
+    "tslib": "2.6.2"
+  },
+  "description": "A component library for building webview-based extensions in Visual Studio Code.",
+  "devDependencies": {
+    "@microsoft/api-extractor": "7.38.4",
+    "@rollup/plugin-commonjs": "17.1.0",
+    "@rollup/plugin-node-resolve": "11.2.0",
+    "@rollup/plugin-typescript": "8.2.0",
+    "@types/react": "18.0.28",
+    "rollup": "2.40.0",
+    "rollup-plugin-delete": "2.0.0",
+    "rollup-plugin-filesize": "9.1.1",
+    "rollup-plugin-terser": "7.0.2",
+    "rollup-plugin-transform-tagged-template": "0.0.3",
+    "typescript": "4.6.2"
+  },
+  "homepage": "https://github.com/microsoft/vscode-webview-ui-toolkit#readme",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "name": "@vscode/webview-ui-toolkit",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/microsoft/vscode-webview-ui-toolkit.git"
   },
-  "license": "MIT",
-  "author": "Microsoft Corporation",
-  "sideEffects": false,
-  "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
   "scripts": {
     "build": "rollup -c && tsc -p ./tsconfig.json && npm run doc && node ./scripts/move-react-build-dir.js",
     "doc": "api-extractor run --local",
@@ -26,23 +41,8 @@
     "test:webview": "npm run build && node ./scripts/setup-webview-test-env.js",
     "test:webview-react": "npm run build && node ./scripts/setup-webview-react-test-env.js"
   },
-  "dependencies": {
-    "@microsoft/fast-element": "^1.12.0",
-    "@microsoft/fast-foundation": "^2.49.4",
-    "@microsoft/fast-react-wrapper": "^0.3.22",
-    "tslib": "^2.6.2"
-  },
-  "devDependencies": {
-    "@microsoft/api-extractor": "^7.38.4",
-    "@rollup/plugin-commonjs": "^17.1.0",
-    "@rollup/plugin-node-resolve": "^11.2.0",
-    "@rollup/plugin-typescript": "^8.2.0",
-    "@types/react": "^18.0.28",
-    "rollup": "^2.40.0",
-    "rollup-plugin-delete": "^2.0.0",
-    "rollup-plugin-filesize": "^9.1.1",
-    "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-transform-tagged-template": "0.0.3",
-    "typescript": "^4.6.2"
-  }
+  "sideEffects": false,
+  "type": "module",
+  "types": "dist/index.d.ts",
+  "version": "1.4.0"
 }
