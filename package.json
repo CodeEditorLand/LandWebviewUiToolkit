@@ -2,17 +2,10 @@
 	"name": "@vscode/webview-ui-toolkit",
 	"version": "1.4.0",
 	"description": "A component library for building webview-based extensions in Visual Studio Code.",
-	"keywords": [
-		"vscode",
-		"visual studio code",
-		"webview",
-		"extension",
-		"ui",
-		"components",
-		"web components",
-		"react"
-	],
 	"homepage": "https://github.com/microsoft/vscode-webview-ui-toolkit#readme",
+	"license": "MIT",
+	"author": "Microsoft Corporation",
+	"type": "module",
 	"bugs": {
 		"url": "https://github.com/microsoft/vscode-webview-ui-toolkit/issues"
 	},
@@ -20,13 +13,11 @@
 		"type": "git",
 		"url": "git+https://github.com/microsoft/vscode-webview-ui-toolkit.git"
 	},
-	"license": "MIT",
-	"author": "Microsoft Corporation",
-	"sideEffects": false,
-	"type": "module",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
+	"sideEffects": false,
 	"scripts": {
+		"start": "npm run test:webview",
 		"build": "rollup -c && tsc -p ./tsconfig.json && npm run doc && node ./scripts/move-react-build-dir.js",
 		"doc": "api-extractor run --local",
 		"fmt": "prettier --config ./.prettierrc --check \"**/*.{ts,js,md}\"",
@@ -34,7 +25,6 @@
 		"lint": "eslint . --ext .ts",
 		"lint:fix": "eslint . --ext .ts --fix",
 		"prepublishOnly": "npm run build",
-		"start": "npm run test:webview",
 		"test:webview": "npm run build && node ./scripts/setup-webview-test-env.js",
 		"test:webview-react": "npm run build && node ./scripts/setup-webview-react-test-env.js"
 	},
@@ -43,6 +33,9 @@
 		"@microsoft/fast-foundation": "^2.49.4",
 		"@microsoft/fast-react-wrapper": "^0.3.22",
 		"tslib": "^2.6.2"
+	},
+	"peerDependencies": {
+		"react": ">=16.9.0"
 	},
 	"devDependencies": {
 		"@microsoft/api-extractor": "^7.38.4",
@@ -63,7 +56,14 @@
 		"rollup-plugin-transform-tagged-template": "0.0.3",
 		"typescript": "^4.6.2"
 	},
-	"peerDependencies": {
-		"react": ">=16.9.0"
-	}
+	"keywords": [
+		"vscode",
+		"visual studio code",
+		"webview",
+		"extension",
+		"ui",
+		"components",
+		"web components",
+		"react"
+	]
 }
