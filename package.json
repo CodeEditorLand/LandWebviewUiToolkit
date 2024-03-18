@@ -30,31 +30,31 @@
 	},
 	"dependencies": {
 		"@microsoft/fast-element": "1.12.0",
-		"@microsoft/fast-foundation": "2.49.4",
-		"@microsoft/fast-react-wrapper": "0.3.22",
+		"@microsoft/fast-foundation": "2.49.5",
+		"@microsoft/fast-react-wrapper": "0.3.23",
 		"tslib": "2.6.2"
 	},
 	"peerDependencies": {
-		"react": ">=16.9.0"
+		"react": ">=18.2.0"
 	},
 	"devDependencies": {
-		"@microsoft/api-extractor": "7.38.4",
+		"@microsoft/api-extractor": "7.42.3",
 		"@microsoft/eslint-config-fast-dna": "2.1.0",
-		"@rollup/plugin-commonjs": "17.1.0",
-		"@rollup/plugin-node-resolve": "11.2.0",
-		"@rollup/plugin-typescript": "8.2.0",
-		"@types/react": "18.0.28",
-		"@typescript-eslint/eslint-plugin": "6.13.2",
-		"eslint": "8.55.0",
+		"@rollup/plugin-commonjs": "25.0.7",
+		"@rollup/plugin-node-resolve": "15.2.3",
+		"@rollup/plugin-typescript": "11.1.6",
+		"@types/react": "18.2.67",
+		"@typescript-eslint/eslint-plugin": "7.2.0",
+		"eslint": "8.57.0",
 		"eslint-config-prettier": "9.1.0",
-		"eslint-plugin-import": "2.29.0",
-		"prettier": "3.1.0",
-		"rollup": "2.40.0",
+		"eslint-plugin-import": "2.29.1",
+		"prettier": "3.2.5",
+		"rollup": "4.13.0",
 		"rollup-plugin-delete": "2.0.0",
-		"rollup-plugin-filesize": "9.1.1",
+		"rollup-plugin-filesize": "10.0.0",
 		"rollup-plugin-terser": "7.0.2",
 		"rollup-plugin-transform-tagged-template": "0.0.3",
-		"typescript": "4.6.2"
+		"typescript": "5.4.2"
 	},
 	"keywords": [
 		"vscode",
