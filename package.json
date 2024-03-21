@@ -48,7 +48,7 @@
 		"rollup-plugin-terser": "7.0.2",
 		"rollup-plugin-transform-tagged-template": "0.0.3",
 		"typescript": "5.4.2",
-		"typescript-esbuild": "latest"
+		"typescript-esbuild": "0.4.5"
 	},
 	"publishConfig": {
 		"access": "public"
