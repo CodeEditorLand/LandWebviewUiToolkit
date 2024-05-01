@@ -1,29 +1,35 @@
 {
-	"name": "@vscode/webview-ui-toolkit",
-	"version": "0.0.1",
-	"private": false,
+	"author": {
+		"email": "Land@PlayForm.Cloud",
+		"name": "🌆 — Land —",
+		"url": "HTTPS://Land.PlayForm.Cloud"
+	},
+	"bugs": {
+		"url": "HTTPS://GitHub.Com/CodeEditorLand/LandWebViewUIToolkit/issues"
+	},
+	"dependencies": {
+		"tslib": "2.6.2"
+	},
 	"description": "A component library for building webview-based extensions in Visual Studio Code.",
+	"devDependencies": {
+		"@playform/build": "0.0.7",
+		"@playform/document": "0.0.6"
+	},
+	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/LandWebViewUIToolkit#readme",
 	"keywords": [
 		"land"
 	],
-	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/LandWebViewUIToolkit#readme",
-	"bugs": {
-		"url": "HTTPS://GitHub.Com/CodeEditorLand/LandWebViewUIToolkit/issues"
+	"license": "SEE LICENSE IN LICENSE",
+	"main": "dist/index.js",
+	"name": "@vscode/webview-ui-toolkit",
+	"private": false,
+	"publishConfig": {
+		"access": "public"
 	},
 	"repository": {
 		"type": "git",
 		"url": "git+HTTPS://github.com/CodeEditorLand/LandWebViewUIToolkit.git"
 	},
-	"license": "SEE LICENSE IN LICENSE",
-	"author": {
-		"name": "🌆 — Land —",
-		"email": "Land@PlayForm.Cloud",
-		"url": "HTTPS://Land.PlayForm.Cloud"
-	},
-	"sideEffects": false,
-	"type": "module",
-	"main": "dist/index.js",
-	"types": "dist/index.d.ts",
 	"scripts": {
 		"Document": "Document 'Source/**/*.ts'",
 		"build": "rollup -c && tsc -p ./tsconfig.json && npm run doc && node ./scripts/move-react-build-dir.js",
@@ -34,14 +40,8 @@
 		"test:webview": "npm run build && node ./scripts/setup-webview-test-env.js",
 		"test:webview-react": "npm run build && node ./scripts/setup-webview-react-test-env.js"
 	},
-	"dependencies": {
-		"tslib": "2.6.2"
-	},
-	"devDependencies": {
-		"@playform/build": "0.0.7",
-		"@playform/document": "0.0.6"
-	},
-	"publishConfig": {
-		"access": "public"
-	}
+	"sideEffects": false,
+	"type": "module",
+	"types": "dist/index.d.ts",
+	"version": "0.0.1"
 }
