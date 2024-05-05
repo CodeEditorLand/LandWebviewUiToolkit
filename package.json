@@ -1,0 +1,47 @@
+{
+	"name": "@vscode/webview-ui-toolkit",
+	"version": "0.0.1",
+	"private": false,
+	"description": "A component library for building webview-based extensions in Visual Studio Code.",
+	"keywords": [
+		"land"
+	],
+	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/LandWebViewUIToolkit#readme",
+	"bugs": {
+		"url": "HTTPS://GitHub.Com/CodeEditorLand/LandWebViewUIToolkit/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+HTTPS://github.com/CodeEditorLand/LandWebViewUIToolkit.git"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"author": {
+		"name": "🌆 — Land —",
+		"email": "Land@PlayForm.Cloud",
+		"url": "HTTPS://Land.PlayForm.Cloud"
+	},
+	"sideEffects": false,
+	"type": "module",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"Document": "Document 'Source/**/*.ts'",
+		"build": "rollup -c && tsc -p ./tsconfig.json && npm run doc && node ./scripts/move-react-build-dir.js",
+		"doc": "api-extractor run --local",
+		"fmt:fix": "prettier --config ./.prettierrc --write \"**/*.{ts,js,md}\"",
+		"prepublishOnly": "Build 'Source/**/*.ts'",
+		"start": "npm run test:webview",
+		"test:webview": "npm run build && node ./scripts/setup-webview-test-env.js",
+		"test:webview-react": "npm run build && node ./scripts/setup-webview-react-test-env.js"
+	},
+	"dependencies": {
+		"tslib": "2.6.2"
+	},
+	"devDependencies": {
+		"@playform/build": "0.0.7",
+		"@playform/document": "0.0.6"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}
