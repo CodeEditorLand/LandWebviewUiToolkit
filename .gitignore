@@ -14,12 +14,7 @@ test-webview-react
 .vscode-test-web/
 
 # Misc
-.DS_Store
 .vscode
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
 .eslintcache
 coverage/
 .npmrc
