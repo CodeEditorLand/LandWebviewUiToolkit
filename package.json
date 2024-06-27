@@ -1,69 +1,20 @@
 {
 	"name": "@vscode/webview-ui-toolkit",
-	"version": "1.4.0",
 	"description": "A component library for building webview-based extensions in Visual Studio Code.",
-	"homepage": "https://github.com/microsoft/vscode-webview-ui-toolkit#readme",
-	"license": "MIT",
-	"author": "Microsoft Corporation",
-	"type": "module",
-	"bugs": {
-		"url": "https://github.com/microsoft/vscode-webview-ui-toolkit/issues"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/microsoft/vscode-webview-ui-toolkit.git"
-	},
+	"sideEffects": false,
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
-	"sideEffects": false,
 	"scripts": {
-		"start": "npm run test:webview",
 		"build": "rollup -c && tsc -p ./tsconfig.json && npm run doc && node ./scripts/move-react-build-dir.js",
 		"doc": "api-extractor run --local",
-		"fmt": "prettier --config ./.prettierrc --check \"**/*.{ts,js,md}\"",
 		"fmt:fix": "prettier --config ./.prettierrc --write \"**/*.{ts,js,md}\"",
-		"lint": "eslint . --ext .ts",
-		"lint:fix": "eslint . --ext .ts --fix",
 		"prepublishOnly": "npm run build",
+		"start": "npm run test:webview",
 		"test:webview": "npm run build && node ./scripts/setup-webview-test-env.js",
 		"test:webview-react": "npm run build && node ./scripts/setup-webview-react-test-env.js"
 	},
 	"dependencies": {
-		"@microsoft/fast-element": "1.13.0",
-		"@microsoft/fast-foundation": "2.49.6",
-		"@microsoft/fast-react-wrapper": "0.3.24",
 		"tslib": "2.6.3"
 	},
-	"peerDependencies": {
-		"react": ">=18.3.1"
-	},
-	"devDependencies": {
-		"@microsoft/api-extractor": "7.47.0",
-		"@microsoft/eslint-config-fast-dna": "2.1.0",
-		"@rollup/plugin-commonjs": "26.0.1",
-		"@rollup/plugin-node-resolve": "15.2.3",
-		"@rollup/plugin-typescript": "11.1.6",
-		"@types/react": "18.3.3",
-		"@typescript-eslint/eslint-plugin": "7.13.1",
-		"eslint": "9.5.0",
-		"eslint-config-prettier": "9.1.0",
-		"eslint-plugin-import": "2.29.1",
-		"prettier": "3.3.2",
-		"rollup": "4.18.0",
-		"rollup-plugin-delete": "2.0.0",
-		"rollup-plugin-filesize": "10.0.0",
-		"rollup-plugin-terser": "7.0.2",
-		"rollup-plugin-transform-tagged-template": "0.0.3",
-		"typescript": "5.4.5"
-	},
-	"keywords": [
-		"vscode",
-		"visual studio code",
-		"webview",
-		"extension",
-		"ui",
-		"components",
-		"web components",
-		"react"
-	]
+	"devDependencies": {}
 }
