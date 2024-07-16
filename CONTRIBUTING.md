@@ -64,7 +64,7 @@ Add and commit your changes with a descriptive message.
 
 ```
 git add .
-git commit -m "Detailed description of your changes."
+git ecommit -m "Detailed description of your changes."
 ```
 
 ### Pull any upstream changes
