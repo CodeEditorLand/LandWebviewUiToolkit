@@ -14,7 +14,7 @@
 		"test:webview-react": "npm run build && node ./scripts/setup-webview-react-test-env.js"
 	},
 	"dependencies": {
-		"tslib": "2.6.3"
+		"tslib": "2.6.2"
 	},
 	"devDependencies": {}
 }
