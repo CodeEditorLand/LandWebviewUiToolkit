@@ -1,8 +1,10 @@
 # Component Documentation List
 
-Here you can find a list of all the components currently available in the toolkit with links to documentation for each component.
+Here you can find a list of all the components currently available in the
+toolkit with links to documentation for each component.
 
-Also see our [React docs](../src/react/README.md) for information on how to use the React toolkit components.
+Also see our [React docs](../src/react/README.md) for information on how to use
+the React toolkit components.
 
 | Component       | Doc Link                                                      |
 | --------------- | ------------------------------------------------------------- |
