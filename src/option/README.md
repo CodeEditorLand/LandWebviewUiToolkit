@@ -4,7 +4,7 @@ The `vscode-option` is a web component implementation of an [option](https://w3c
 
 ![Option hero](/docs/assets/images/option-hero.png)
 
-## Usage
+## 🛠️ Usage
 
 The `vscode-option` component will only provide internals related to form association when used within a form-associated component. See the [vscode-dropdown](../dropdown/README.md) component for more details.
 

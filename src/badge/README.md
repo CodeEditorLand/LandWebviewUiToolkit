@@ -4,7 +4,7 @@ The `vscode-badge` component is used to highlight an item, attract attention, an
 
 ![Badge hero](/docs/assets/images/badge-hero.png)
 
-## Usage
+## 🛠️ Usage
 
 | ❌ Don't                                                                                           | ✅ Do                                                          |
 | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |

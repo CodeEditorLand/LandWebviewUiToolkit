@@ -4,7 +4,7 @@ The `vscode-link` is a web component implementation of an [anchor element](https
 
 ![Link hero](/docs/assets/images/link-hero.png)
 
-## Usage
+## 🛠️ Usage
 
 | ❌ Don't                                                                               | ✅ Do                                                                  |
 | -------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |

@@ -10,7 +10,7 @@ The data grid is created using three components that work together:
 - `<vscode-data-grid-row>`: Displays a single row of data associated with a single record or a header row.
 - `<vscode-data-grid-cell>`: Displays a single cell of data within a row.
 
-## Usage
+## 🛠️ Usage
 
 | ❌ Don't                                                                     | ✅ Do                                                                      |
 | ---------------------------------------------------------------------------- | -------------------------------------------------------------------------- |

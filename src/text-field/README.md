@@ -4,7 +4,7 @@ The `vscode-text-field` is a web component implementation of a [text field eleme
 
 ![Text field hero](/docs/assets/images/text-field-hero.png)
 
-## Usage
+## 🛠️ Usage
 
 | ❌ Don't                                                                                                                                    | ✅ Do                                                                     |
 | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |

@@ -10,7 +10,7 @@ The component is created using three components that work together to interchang
 - `<vscode-panel-tab>`: Renders the panel tab that will be associated with a panel view.
 - `<vscode-panel-view>`: The container element that will hold content associated with a given tab.
 
-## Usage
+## 🛠️ Usage
 
 | ❌ Don't                                                                                      | ✅ Do                                                                               |
 | --------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |

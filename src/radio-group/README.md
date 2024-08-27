@@ -4,7 +4,7 @@ The `vscode-radio-group` is a web component implementation of a [radio group](ht
 
 ![Radio group hero](/docs/assets/images/radio-group-hero.png)
 
-## Usage
+## 🛠️ Usage
 
 | ❌ Don't                                                                                                                 | ✅ Do                                                                                  |
 | ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- |

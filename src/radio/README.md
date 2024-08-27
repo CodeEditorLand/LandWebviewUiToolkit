@@ -4,7 +4,7 @@ The `vscode-radio` is a web component implementation of a [radio element](https:
 
 ![Radio hero](/docs/assets/images/radio-hero.png)
 
-## Usage
+## 🛠️ Usage
 
 For guidelines on usage in an extension, see the [vscode-radio-group](../radio-group/README.md) component.
 

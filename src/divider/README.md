@@ -4,7 +4,7 @@ The `vscode-divider` is a web component implementation of a [horizontal rule ele
 
 ![Divider hero](/docs/assets/images/divider-hero.png)
 
-## Usage
+## 🛠️ Usage
 
 | ❌ Don't                                                                             | ✅ Do                                                                                              |
 | ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------- |

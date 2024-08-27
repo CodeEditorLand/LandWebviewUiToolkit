@@ -4,7 +4,7 @@ The `vscode-button` is a web component implementation of a [button element](http
 
 ![Button hero](/docs/assets/images/button-hero.png)
 
-## Usage
+## 🛠️ Usage
 
 ### Types
 

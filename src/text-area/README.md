@@ -4,7 +4,7 @@ The `vscode-text-area` is a web component implementation of a [text area element
 
 ![Text area hero](/docs/assets/images/text-area-hero.png)
 
-## Usage
+## 🛠️ Usage
 
 Read the [text-field](../text-field/README.md) usage guidelines for general guidance when using text inputs.
 
