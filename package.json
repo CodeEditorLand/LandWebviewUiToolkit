@@ -1,6 +1,6 @@
 {
 	"dependencies": {
-		"tslib": "^2.6.2"
+		"tslib": "2.7.0"
 	},
 	"description": "A component library for building webview-based extensions in Visual Studio Code.",
 	"devDependencies": {},
