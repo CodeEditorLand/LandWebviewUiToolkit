@@ -1,9 +1,11 @@
 {
-	"name": "@vscode/webview-ui-toolkit",
+	"dependencies": {
+		"tslib": "2.7.0"
+	},
 	"description": "A component library for building webview-based extensions in Visual Studio Code.",
-	"sideEffects": false,
+	"devDependencies": {},
 	"main": "dist/index.js",
-	"types": "dist/index.d.ts",
+	"name": "@vscode/webview-ui-toolkit",
 	"scripts": {
 		"build": "rollup -c && tsc -p ./tsconfig.json && npm run doc && node ./scripts/move-react-build-dir.js",
 		"doc": "api-extractor run --local",
@@ -13,8 +15,6 @@
 		"test:webview": "npm run build && node ./scripts/setup-webview-test-env.js",
 		"test:webview-react": "npm run build && node ./scripts/setup-webview-react-test-env.js"
 	},
-	"dependencies": {
-		"tslib": "2.7.0"
-	},
-	"devDependencies": {}
+	"sideEffects": false,
+	"types": "dist/index.d.ts"
 }
