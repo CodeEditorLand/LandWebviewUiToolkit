@@ -1,45 +1,45 @@
 /* eslint-env node */
-import commonjs from '@rollup/plugin-commonjs';
-import filesize from 'rollup-plugin-filesize';
-import {nodeResolve} from '@rollup/plugin-node-resolve';
-import transformTaggedTemplate from 'rollup-plugin-transform-tagged-template';
-import typescript from '@rollup/plugin-typescript';
-import {terser} from 'rollup-plugin-terser';
-import del from 'rollup-plugin-delete';
+import commonjs from "@rollup/plugin-commonjs";
+import { nodeResolve } from "@rollup/plugin-node-resolve";
+import typescript from "@rollup/plugin-typescript";
+import del from "rollup-plugin-delete";
+import filesize from "rollup-plugin-filesize";
+import { terser } from "rollup-plugin-terser";
+import transformTaggedTemplate from "rollup-plugin-transform-tagged-template";
 
 // ----- Rollup Config -----
 
 const parserOptions = {
-	sourceType: 'module',
+	sourceType: "module",
 };
 
 export default [
 	{
-		context: 'this',
-		input: 'src/index-rollup.ts',
+		context: "this",
+		input: "src/index-rollup.ts",
 		output: [
 			{
-				file: 'dist/toolkit.js',
-				format: 'esm',
+				file: "dist/toolkit.js",
+				format: "esm",
 			},
 			{
-				file: 'dist/toolkit.min.js',
-				format: 'esm',
+				file: "dist/toolkit.min.js",
+				format: "esm",
 				plugins: [terser()],
 			},
 		],
 		plugins: [
-			del({targets: 'dist/*'}),
+			del({ targets: "dist/*" }),
 			nodeResolve(),
 			commonjs(),
 			typescript(),
 			transformTaggedTemplate({
-				tagsToProcess: ['css'],
+				tagsToProcess: ["css"],
 				transformer: transformCSSFragment,
 				parserOptions,
 			}),
 			transformTaggedTemplate({
-				tagsToProcess: ['html'],
+				tagsToProcess: ["html"],
 				transformer: transformHTMLFragment,
 				parserOptions,
 			}),
@@ -56,8 +56,8 @@ export default [
 function transformHTMLFragment(data) {
 	const spaceBeforeAfterAngleBrackets = /\s*([<>])\s*/g; // remove spaces before and after angle brackets
 
-	data = data.replace(spaceBeforeAfterAngleBrackets, '$1');
-	return data.replace(/\s{2,}/g, ' '); // Collapse all sequences to 1 space
+	data = data.replace(spaceBeforeAfterAngleBrackets, "$1");
+	return data.replace(/\s{2,}/g, " "); // Collapse all sequences to 1 space
 }
 
 function transformCSSFragment(data) {
@@ -67,9 +67,9 @@ function transformCSSFragment(data) {
 	const extraSpaces = /\s\s+/g;
 	const endingSpaces = / ?\s+$/g;
 
-	data = data.replace(newlines, '');
-	data = data.replace(separators, '$1');
-	data = data.replace(lastProp, '$1');
-	data = data.replace(endingSpaces, ' ');
-	return data.replace(extraSpaces, ' ');
+	data = data.replace(newlines, "");
+	data = data.replace(separators, "$1");
+	data = data.replace(lastProp, "$1");
+	data = data.replace(endingSpaces, " ");
+	return data.replace(extraSpaces, " ");
 }
