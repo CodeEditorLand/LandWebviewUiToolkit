@@ -1,14 +1,15 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {css} from '@microsoft/fast-element';
+import { css } from "@microsoft/fast-element";
 import {
 	disabledCursor,
 	display,
 	ElementDefinitionContext,
 	focusVisible,
 	RadioOptions,
-} from '@microsoft/fast-foundation';
+} from "@microsoft/fast-foundation";
+
 import {
 	borderWidth,
 	checkboxBackground,
@@ -20,13 +21,13 @@ import {
 	foreground,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
-} from '../design-tokens.js';
+} from "../design-tokens.js";
 
 export const radioStyles = (
 	context: ElementDefinitionContext,
-	definition: RadioOptions
+	definition: RadioOptions,
 ) => css`
-	${display('inline-flex')} :host {
+	${display("inline-flex")} :host {
 		align-items: center;
 		flex-direction: row;
 		font-size: ${typeRampBaseFontSize};
@@ -83,15 +84,15 @@ export const radioStyles = (
 	:host(:${focusVisible}) .control {
 		border: calc(${borderWidth} * 1px) solid ${focusBorder};
 	}
-	:host([aria-checked='true']) .control {
+	:host([aria-checked="true"]) .control {
 		background: ${checkboxBackground};
 		border: calc(${borderWidth} * 1px) solid ${checkboxBorder};
 	}
-	:host([aria-checked='true']:not([disabled])) .control:hover {
+	:host([aria-checked="true"]:not([disabled])) .control:hover {
 		background: ${checkboxBackground};
 		border: calc(${borderWidth} * 1px) solid ${checkboxBorder};
 	}
-	:host([aria-checked='true']:not([disabled])) .control:active {
+	:host([aria-checked="true"]:not([disabled])) .control:active {
 		background: ${checkboxBackground};
 		border: calc(${borderWidth} * 1px) solid ${focusBorder};
 	}
@@ -104,7 +105,7 @@ export const radioStyles = (
 	:host([disabled]) .control {
 		cursor: ${disabledCursor};
 	}
-	:host([aria-checked='true']) .checked-indicator {
+	:host([aria-checked="true"]) .checked-indicator {
 		opacity: 1;
 	}
 	:host([disabled]) {

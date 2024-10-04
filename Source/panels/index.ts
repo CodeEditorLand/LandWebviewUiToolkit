@@ -10,10 +10,11 @@ import {
 	TabsOrientation,
 	tabsTemplate,
 	tabTemplate,
-} from '@microsoft/fast-foundation';
-import {panelsStyles} from './panels.styles.js';
-import {panelTabStyles} from './panel-tab.styles.js';
-import {panelViewStyles} from './panel-view.styles.js';
+} from "@microsoft/fast-foundation";
+
+import { panelTabStyles } from "./panel-tab.styles.js";
+import { panelViewStyles } from "./panel-view.styles.js";
+import { panelsStyles } from "./panels.styles.js";
 
 /**
  * The Visual Studio Code panels class.
@@ -39,9 +40,9 @@ export class Panels extends FoundationTabs {
 
 		// Sets a default ARIA label on the panels component only if an
 		// aria-label attribute does not already exist
-		const ariaLabelValue = this.getAttribute('aria-label');
+		const ariaLabelValue = this.getAttribute("aria-label");
 		if (!ariaLabelValue) {
-			this.setAttribute('aria-label', 'Panels');
+			this.setAttribute("aria-label", "Panels");
 		}
 	}
 }
@@ -58,7 +59,7 @@ export const vsCodePanels = Panels.compose<
 	FoundationElementDefinition,
 	typeof Panels
 >({
-	baseName: 'panels',
+	baseName: "panels",
 	template: tabsTemplate,
 	styles: panelsStyles,
 });
@@ -86,7 +87,7 @@ export class PanelTab extends FoundationTab {
 		}
 
 		if (this.textContent) {
-			this.setAttribute('aria-label', this.textContent);
+			this.setAttribute("aria-label", this.textContent);
 		}
 	}
 }
@@ -103,7 +104,7 @@ export const vsCodePanelTab = PanelTab.compose<
 	FoundationElementDefinition,
 	typeof PanelTab
 >({
-	baseName: 'panel-tab',
+	baseName: "panel-tab",
 	template: tabTemplate,
 	styles: panelTabStyles,
 });
@@ -127,7 +128,7 @@ export const vsCodePanelView = PanelView.compose<
 	FoundationElementDefinition,
 	typeof PanelView
 >({
-	baseName: 'panel-view',
+	baseName: "panel-view",
 	template: tabPanelTemplate,
 	styles: panelViewStyles,
 });

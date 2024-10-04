@@ -1,23 +1,24 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {css} from '@microsoft/fast-element';
+import { css } from "@microsoft/fast-element";
 import {
 	display,
 	ElementDefinitionContext,
 	FoundationElementDefinition,
-} from '@microsoft/fast-foundation';
+} from "@microsoft/fast-foundation";
+
 import {
 	designUnit,
 	foreground,
 	typeRampBaseFontSize,
-} from '../design-tokens.js';
+} from "../design-tokens.js";
 
 export const radioGroupStyles = (
 	context: ElementDefinitionContext,
-	definition: FoundationElementDefinition
+	definition: FoundationElementDefinition,
 ) => css`
-	${display('flex')} :host {
+	${display("flex")} :host {
 		align-items: flex-start;
 		margin: calc(${designUnit} * 1px) 0;
 		flex-direction: column;
@@ -26,13 +27,13 @@ export const radioGroupStyles = (
 		display: flex;
 		flex-wrap: wrap;
 	}
-	:host([orientation='vertical']) .positioning-region {
+	:host([orientation="vertical"]) .positioning-region {
 		flex-direction: column;
 	}
-	:host([orientation='horizontal']) .positioning-region {
+	:host([orientation="horizontal"]) .positioning-region {
 		flex-direction: row;
 	}
-	::slotted([slot='label']) {
+	::slotted([slot="label"]) {
 		color: ${foreground};
 		font-size: ${typeRampBaseFontSize};
 		margin: calc(${designUnit} * 1px) 0;

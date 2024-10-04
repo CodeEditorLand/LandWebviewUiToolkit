@@ -5,8 +5,9 @@ import {
 	Badge as FoundationBadge,
 	FoundationElementDefinition,
 	badgeTemplate as template,
-} from '@microsoft/fast-foundation';
-import {tagStyles as styles} from './tag.styles.js';
+} from "@microsoft/fast-foundation";
+
+import { tagStyles as styles } from "./tag.styles.js";
 
 /**
  * The Visual Studio Code tag class.
@@ -41,7 +42,7 @@ export class Tag extends FoundationBadge {
  * @public
  */
 export const vsCodeTag = Tag.compose<FoundationElementDefinition, typeof Tag>({
-	baseName: 'tag',
+	baseName: "tag",
 	template,
 	styles,
 });

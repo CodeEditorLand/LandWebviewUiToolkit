@@ -1,21 +1,22 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {css} from '@microsoft/fast-element';
+import { css } from "@microsoft/fast-element";
 import {
 	ElementDefinitionContext,
 	FoundationElementDefinition,
-} from '@microsoft/fast-foundation';
+} from "@microsoft/fast-foundation";
+
 import {
 	background,
 	contrastActiveBorder,
 	designUnit,
 	listHoverBackground,
-} from '../design-tokens.js';
+} from "../design-tokens.js";
 
 export const dataGridRowStyles = (
 	context: ElementDefinitionContext,
-	definition: FoundationElementDefinition
+	definition: FoundationElementDefinition,
 ) => css`
 	:host {
 		display: grid;

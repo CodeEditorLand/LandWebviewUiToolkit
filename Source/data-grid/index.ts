@@ -12,12 +12,13 @@ import {
 	GenerateHeaderOptions,
 	dataGridTemplate as gridTemplate,
 	dataGridRowTemplate as rowTemplate,
-} from '@microsoft/fast-foundation';
-import {dataGridStyles as gridStyles} from './data-grid.styles.js';
-import {dataGridRowStyles as rowStyles} from './data-grid-row.styles.js';
-import {dataGridCellStyles as cellStyles} from './data-grid-cell.styles.js';
+} from "@microsoft/fast-foundation";
 
-export {DataGridCellTypes, DataGridRowTypes, GenerateHeaderOptions};
+import { dataGridCellStyles as cellStyles } from "./data-grid-cell.styles.js";
+import { dataGridRowStyles as rowStyles } from "./data-grid-row.styles.js";
+import { dataGridStyles as gridStyles } from "./data-grid.styles.js";
+
+export { DataGridCellTypes, DataGridRowTypes, GenerateHeaderOptions };
 
 /**
  * The Visual Studio Code data grid class.
@@ -36,9 +37,9 @@ export class DataGrid extends FoundationDataGrid {
 
 		// Sets a default ARIA label on the data grid only if an aria-label attribute
 		// does not already exist
-		const ariaLabelValue = this.getAttribute('aria-label');
+		const ariaLabelValue = this.getAttribute("aria-label");
 		if (!ariaLabelValue) {
-			this.setAttribute('aria-label', 'Data Grid');
+			this.setAttribute("aria-label", "Data Grid");
 		}
 	}
 }
@@ -55,7 +56,7 @@ export const vsCodeDataGrid = DataGrid.compose<
 	FoundationElementDefinition,
 	typeof DataGrid
 >({
-	baseName: 'data-grid',
+	baseName: "data-grid",
 	baseClass: FoundationDataGrid,
 	template: gridTemplate,
 	styles: gridStyles,
@@ -80,7 +81,7 @@ export const vsCodeDataGridRow = DataGridRow.compose<
 	FoundationElementDefinition,
 	typeof DataGridRow
 >({
-	baseName: 'data-grid-row',
+	baseName: "data-grid-row",
 	baseClass: FoundationDataGridRow,
 	template: rowTemplate,
 	styles: rowStyles,
@@ -105,7 +106,7 @@ export const vsCodeDataGridCell = DataGridCell.compose<
 	FoundationElementDefinition,
 	typeof DataGridCell
 >({
-	baseName: 'data-grid-cell',
+	baseName: "data-grid-cell",
 	baseClass: FoundationDataGridCell,
 	template: cellTemplate,
 	styles: cellStyles,

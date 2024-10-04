@@ -1,13 +1,14 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {css} from '@microsoft/fast-element';
+import { css } from "@microsoft/fast-element";
 import {
 	disabledCursor,
 	display,
 	ElementDefinitionContext,
 	focusVisible,
-} from '@microsoft/fast-foundation';
+} from "@microsoft/fast-foundation";
+
 import {
 	borderWidth,
 	cornerRadius,
@@ -19,14 +20,14 @@ import {
 	listActiveSelectionForeground,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
-} from '../design-tokens.js';
-import {OptionOptions} from './index.js';
+} from "../design-tokens.js";
+import { OptionOptions } from "./index.js";
 
 export const optionStyles = (
 	context: ElementDefinitionContext,
-	definition: OptionOptions
+	definition: OptionOptions,
 ) => css`
-	${display('inline-flex')} :host {
+	${display("inline-flex")} :host {
 		font-family: var(--body-font);
 		border-radius: ${cornerRadius};
 		border: calc(${borderWidth} * 1px) solid transparent;
@@ -49,7 +50,7 @@ export const optionStyles = (
 		background: ${listActiveSelectionBackground};
 		color: ${foreground};
 	}
-	:host([aria-selected='true']) {
+	:host([aria-selected="true"]) {
 		background: ${listActiveSelectionBackground};
 		border: calc(${borderWidth} * 1px) solid transparent;
 		color: ${listActiveSelectionForeground};
@@ -58,12 +59,12 @@ export const optionStyles = (
 		background: ${listActiveSelectionBackground};
 		color: ${listActiveSelectionForeground};
 	}
-	:host(:not([aria-selected='true']):hover) {
+	:host(:not([aria-selected="true"]):hover) {
 		background: ${listActiveSelectionBackground};
 		border: calc(${borderWidth} * 1px) solid transparent;
 		color: ${listActiveSelectionForeground};
 	}
-	:host(:not([aria-selected='true']):active) {
+	:host(:not([aria-selected="true"]):active) {
 		background: ${listActiveSelectionBackground};
 		color: ${foreground};
 	}

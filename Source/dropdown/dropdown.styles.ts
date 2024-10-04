@@ -1,13 +1,14 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
-import {css} from '@microsoft/fast-element';
+import { css } from "@microsoft/fast-element";
 import {
 	disabledCursor,
 	display,
 	ElementDefinitionContext,
 	focusVisible,
-} from '@microsoft/fast-foundation';
+} from "@microsoft/fast-foundation";
+
 import {
 	borderWidth,
 	cornerRadiusRound,
@@ -25,14 +26,14 @@ import {
 	listActiveSelectionForeground,
 	typeRampBaseFontSize,
 	typeRampBaseLineHeight,
-} from '../design-tokens.js';
-import {DropdownOptions} from './index.js';
+} from "../design-tokens.js";
+import { DropdownOptions } from "./index.js";
 
 export const dropdownStyles = (
 	context: ElementDefinitionContext,
-	definition: DropdownOptions
+	definition: DropdownOptions,
 ) => css`
-	${display('inline-flex')} :host {
+	${display("inline-flex")} :host {
 		background: ${dropdownBackground};
 		border-radius: calc(${cornerRadiusRound} * 1px);
 		box-sizing: border-box;
@@ -112,18 +113,18 @@ export const dropdownStyles = (
 	:host([open]) .control {
 		border-color: ${focusBorder};
 	}
-	:host([open][position='above']) .listbox {
+	:host([open][position="above"]) .listbox {
 		border-bottom-left-radius: 0;
 		border-bottom-right-radius: 0;
 	}
-	:host([open][position='below']) .listbox {
+	:host([open][position="below"]) .listbox {
 		border-top-left-radius: 0;
 		border-top-right-radius: 0;
 	}
-	:host([open][position='above']) .listbox {
+	:host([open][position="above"]) .listbox {
 		bottom: calc(${inputHeight} * 1px);
 	}
-	:host([open][position='below']) .listbox {
+	:host([open][position="below"]) .listbox {
 		top: calc(${inputHeight} * 1px);
 	}
 	.selected-value {
@@ -138,11 +139,11 @@ export const dropdownStyles = (
 		flex: 0 0 auto;
 		margin-inline-start: 1em;
 	}
-	slot[name='listbox'] {
+	slot[name="listbox"] {
 		display: none;
 		width: 100%;
 	}
-	:host([open]) slot[name='listbox'] {
+	:host([open]) slot[name="listbox"] {
 		display: flex;
 		position: absolute;
 	}
@@ -161,7 +162,7 @@ export const dropdownStyles = (
 		min-width: calc(${designUnit} * 4px);
 		width: 1em;
 	}
-	::slotted([role='option']),
+	::slotted([role="option"]),
 	::slotted(option) {
 		flex: 0 0 auto;
 	}
