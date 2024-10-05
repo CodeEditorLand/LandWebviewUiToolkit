@@ -1,12 +1,14 @@
 # Visual Studio Code Text Area
 
-The `vscode-text-area` is a web component implementation of a [text area element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea).
+The `vscode-text-area` is a web component implementation of a
+[text area element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea).
 
 ![Text area hero](/docs/assets/images/text-area-hero.png)
 
 ## Usage
 
-Read the [text-field](../text-field/README.md) usage guidelines for general guidance when using text inputs.
+Read the [text-field](../text-field/README.md) usage guidelines for general
+guidance when using text inputs.
 
 | ❌ Don't                                                                                                                              | ✅ Do                                                                            |
 | ------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
@@ -69,13 +71,17 @@ Read the [text-field](../text-field/README.md) usage guidelines for general guid
 
 ### Form Attribute
 
-The `form` attribute should contain the `id` value of the form element that the `vscode-text-area` is associated with. The associated form element should be in the same document as the `vscode-text-area`.
+The `form` attribute should contain the `id` value of the form element that the
+`vscode-text-area` is associated with. The associated form element should be in
+the same document as the `vscode-text-area`.
 
-This attribute allows you to place the `vscode-text-area` component anywhere within a document, not just as the child of a form element.
+This attribute allows you to place the `vscode-text-area` component anywhere
+within a document, not just as the child of a form element.
 
 **Note**
 
-If this attribute is not specified, the `vscode-text-area` should be a child of a form element.
+If this attribute is not specified, the `vscode-text-area` should be a child of
+a form element.
 
 ```html
 <form id="sample-form"></form>
@@ -92,13 +98,17 @@ If this attribute is not specified, the `vscode-text-area` should be a child of 
 ### Name Attribute
 
 ```html
-<vscode-text-area name="example-vscode-text-area"> Text Area Label </vscode-text-area>
+<vscode-text-area name="example-vscode-text-area">
+	Text Area Label
+</vscode-text-area>
 ```
 
 ### Placeholder Attribute
 
 ```html
-<vscode-text-area placeholder="Placeholder Text"> Text Area Label </vscode-text-area>
+<vscode-text-area placeholder="Placeholder Text">
+	Text Area Label
+</vscode-text-area>
 ```
 
 ### Read Only Attribute

@@ -1,12 +1,14 @@
 # Visual Studio Code Radio
 
-The `vscode-radio` is a web component implementation of a [radio element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio).
+The `vscode-radio` is a web component implementation of a
+[radio element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio).
 
 ![Radio hero](/docs/assets/images/radio-hero.png)
 
 ## Usage
 
-For guidelines on usage in an extension, see the [vscode-radio-group](../radio-group/README.md) component.
+For guidelines on usage in an extension, see the
+[vscode-radio-group](../radio-group/README.md) component.
 
 ## Implementation
 

@@ -1,6 +1,7 @@
 # Visual Studio Code Checkbox
 
-The `vscode-checkbox` is a web component implementation of a [checkbox element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input/checkbox).
+The `vscode-checkbox` is a web component implementation of a
+[checkbox element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input/checkbox).
 
 ![Checkbox hero](/docs/assets/images/checkbox-hero.png)
 
@@ -91,7 +92,9 @@ The `vscode-checkbox` is a web component implementation of a [checkbox element](
 
 ### Indeterminate Property
 
-Checkboxes can also render an indeterminate state. This is achieved by getting a reference to a given checkbox using JavaScript and then setting the `indeterminate` property of the checkbox to `true`.
+Checkboxes can also render an indeterminate state. This is achieved by getting a
+reference to a given checkbox using JavaScript and then setting the
+`indeterminate` property of the checkbox to `true`.
 
 ```javascript
 const checkbox = document.getElementById("basic-checkbox");
@@ -104,18 +107,19 @@ checkbox.indeterminate = true;
 
 ### Form Usage
 
-Here is an example of the Visual Studio Code Checkbox and its various attributes being used in a form.
+Here is an example of the Visual Studio Code Checkbox and its various attributes
+being used in a form.
 
 ```html
 <form>
-  <fieldset>
-    <legend>Fieldset Legend</legend>
-    <vscode-checkbox checked required>Checked + Required</vscode-checkbox>
-    <vscode-checkbox checked readonly>Checked + Readonly</vscode-checkbox>
-    <vscode-checkbox autofocus>Autofocus</vscode-checkbox>
-    <vscode-checkbox disabled>Disabled</vscode-checkbox>
-    <vscode-checkbox value="baz">Value Set To "baz"</vscode-checkbox>
-  </fieldset>
-  <vscode-button type="submit">Submit Button</vscode-button>
+	<fieldset>
+		<legend>Fieldset Legend</legend>
+		<vscode-checkbox checked required>Checked + Required</vscode-checkbox>
+		<vscode-checkbox checked readonly>Checked + Readonly</vscode-checkbox>
+		<vscode-checkbox autofocus>Autofocus</vscode-checkbox>
+		<vscode-checkbox disabled>Disabled</vscode-checkbox>
+		<vscode-checkbox value="baz">Value Set To "baz"</vscode-checkbox>
+	</fieldset>
+	<vscode-button type="submit">Submit Button</vscode-button>
 </form>
 ```

@@ -1,6 +1,7 @@
 # Visual Studio Code Text Field
 
-The `vscode-text-field` is a web component implementation of a [text field element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input/text).
+The `vscode-text-field` is a web component implementation of a
+[text field element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input/text).
 
 ![Text field hero](/docs/assets/images/text-field-hero.png)
 
@@ -71,13 +72,17 @@ The `vscode-text-field` is a web component implementation of a [text field eleme
 ### Name Attribute
 
 ```html
-<vscode-text-field name="example-vscode-text-field">Text Field Label</vscode-text-field>
+<vscode-text-field name="example-vscode-text-field"
+	>Text Field Label</vscode-text-field
+>
 ```
 
 ### Placeholder Attribute
 
 ```html
-<vscode-text-field placeholder="Placeholder Text">Text Field Label</vscode-text-field>
+<vscode-text-field placeholder="Placeholder Text"
+	>Text Field Label</vscode-text-field
+>
 ```
 
 ### Read Only Attribute
@@ -94,7 +99,8 @@ The `vscode-text-field` is a web component implementation of a [text field eleme
 
 ### Type Attribute
 
-Sets the text field type. Valid options include: "email", "password", "tel", "text", and "url". The default value is "text".
+Sets the text field type. Valid options include: "email", "password", "tel",
+"text", and "url". The default value is "text".
 
 ```html
 <vscode-text-field type="email">Text Field Label</vscode-text-field>
@@ -106,51 +112,58 @@ Sets the text field type. Valid options include: "email", "password", "tel", "te
 
 ### Start Icon
 
-An icon can be added to the left of the text field by adding an element with the attribute `slot="start"`.
+An icon can be added to the left of the text field by adding an element with the
+attribute `slot="start"`.
 
 ```html
 <!-- Note: Using Visual Studio Code Codicon Library -->
 
 <vscode-text-field>
-  Text Field Label
-  <span slot="start" class="codicon codicon-git-merge"></span>
+	Text Field Label
+	<span class="codicon codicon-git-merge" slot="start"></span>
 </vscode-text-field>
 ```
 
 ### End Icon
 
-An icon can be added to the right of the text field by adding an element with the attribute `slot="end"`.
+An icon can be added to the right of the text field by adding an element with
+the attribute `slot="end"`.
 
 ```html
 <!-- Note: Using Visual Studio Code Codicon Library -->
 
 <vscode-text-field>
-  Text Field Label
-  <span slot="end" class="codicon codicon-chevron-right"></span>
+	Text Field Label
+	<span class="codicon codicon-chevron-right" slot="end"></span>
 </vscode-text-field>
 ```
 
 ### Multiple Icons
 
-Building on top of the icon examples above, multiple icons can also be inserted into the start and end slots of a text field with the `slot="start"` and `slot="end"` attributes.
+Building on top of the icon examples above, multiple icons can also be inserted
+into the start and end slots of a text field with the `slot="start"` and
+`slot="end"` attributes.
 
-The below example demonstrates how the native search text field from VS Code might be _visually_ implemented with a `section` tag that wraps a few `vscode-buttons` with an icon appearance applied (please note that further JavaScript is needed to make this example functional, however).
+The below example demonstrates how the native search text field from VS Code
+might be _visually_ implemented with a `section` tag that wraps a few
+`vscode-buttons` with an icon appearance applied (please note that further
+JavaScript is needed to make this example functional, however).
 
 ```html
 <!-- Note: Using Visual Studio Code Codicon Library -->
 
 <vscode-text-field>
-  Text Field Label
-  <section slot="end" style="display:flex; align-items: center;">
-    <vscode-button appearance="icon" aria-label="Match Case">
-      <span class="codicon codicon-case-sensitive"></span>
-    </vscode-button>
-    <vscode-button appearance="icon" aria-label="Match Whole Word">
-      <span class="codicon codicon-whole-word"></span>
-    </vscode-button>
-    <vscode-button appearance="icon" aria-label="Use Regular Expression">
-      <span class="codicon codicon-regex"></span>
-    </vscode-button>
-  </section>
+	Text Field Label
+	<section slot="end" style="display:flex; align-items: center;">
+		<vscode-button appearance="icon" aria-label="Match Case">
+			<span class="codicon codicon-case-sensitive"></span>
+		</vscode-button>
+		<vscode-button appearance="icon" aria-label="Match Whole Word">
+			<span class="codicon codicon-whole-word"></span>
+		</vscode-button>
+		<vscode-button appearance="icon" aria-label="Use Regular Expression">
+			<span class="codicon codicon-regex"></span>
+		</vscode-button>
+	</section>
 </vscode-text-field>
 ```
