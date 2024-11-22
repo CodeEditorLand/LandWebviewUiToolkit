@@ -33,10 +33,12 @@ function applyCurrentTheme(tokenMappings: Map<string, CSSDesignToken<T>>) {
 	// Importantly this includes all the CSS variables associated with the
 	// current Visual Studio Code theme
 	const styles = getComputedStyle(document.body);
+
 	const body = document.querySelector("body");
 
 	if (body) {
 		const themeKind = body.getAttribute("data-vscode-theme-kind");
+
 		for (const [vscodeTokenName, toolkitToken] of tokenMappings) {
 			let value = styles.getPropertyValue(vscodeTokenName).toString();
 
@@ -75,12 +77,17 @@ function applyCurrentTheme(tokenMappings: Map<string, CSSDesignToken<T>>) {
 					switch (toolkitToken.name) {
 						case "button-primary-hover-background":
 							value = "#0F4A85";
+
 							break;
+
 						case "button-secondary-hover-background":
 							value = "transparent";
+
 							break;
+
 						case "button-icon-hover-background":
 							value = "transparent";
+
 							break;
 					}
 				}

@@ -23,6 +23,7 @@ export class Radio extends FoundationRadio {
 	 */
 	public connectedCallback() {
 		super.connectedCallback();
+
 		if (this.textContent) {
 			this.setAttribute("aria-label", this.textContent);
 		} else {

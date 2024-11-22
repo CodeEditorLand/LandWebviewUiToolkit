@@ -38,6 +38,7 @@ export class DataGrid extends FoundationDataGrid {
 		// Sets a default ARIA label on the data grid only if an aria-label attribute
 		// does not already exist
 		const ariaLabelValue = this.getAttribute("aria-label");
+
 		if (!ariaLabelValue) {
 			this.setAttribute("aria-label", "Data Grid");
 		}

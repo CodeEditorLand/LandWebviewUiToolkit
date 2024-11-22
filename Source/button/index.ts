@@ -68,6 +68,7 @@ export class Button extends FoundationButton {
 			// Only set the ARIA label to the default text if an aria-label attribute
 			// does not exist on the button
 			const ariaLabelValue = this.getAttribute("aria-label");
+
 			if (!ariaLabelValue) {
 				this.ariaLabel = "Icon Button";
 			}

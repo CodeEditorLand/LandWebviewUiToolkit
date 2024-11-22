@@ -23,6 +23,7 @@ export class Checkbox extends FoundationCheckbox {
 	 */
 	public connectedCallback() {
 		super.connectedCallback();
+
 		if (this.textContent) {
 			this.setAttribute("aria-label", this.textContent);
 		} else {

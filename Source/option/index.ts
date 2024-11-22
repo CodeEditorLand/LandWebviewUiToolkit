@@ -29,6 +29,7 @@ export class Option extends FoundationListboxOption {
 	 */
 	public connectedCallback() {
 		super.connectedCallback();
+
 		if (this.textContent) {
 			this.setAttribute("aria-label", this.textContent);
 		} else {

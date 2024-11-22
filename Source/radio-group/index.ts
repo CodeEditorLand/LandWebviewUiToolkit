@@ -29,6 +29,7 @@ export class RadioGroup extends FoundationRadioGroup {
 		// Generates a unique id for each radio group label so that the label element
 		// within the group can be correctly associated with the radio group.
 		const label = this.querySelector("label");
+
 		if (label) {
 			const id = "radio-group-" + Math.random().toString(16).slice(2);
 			label.setAttribute("id", id);

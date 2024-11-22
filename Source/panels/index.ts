@@ -41,6 +41,7 @@ export class Panels extends FoundationTabs {
 		// Sets a default ARIA label on the panels component only if an
 		// aria-label attribute does not already exist
 		const ariaLabelValue = this.getAttribute("aria-label");
+
 		if (!ariaLabelValue) {
 			this.setAttribute("aria-label", "Panels");
 		}
