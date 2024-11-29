@@ -42,6 +42,7 @@ export class Button extends FoundationButton {
 		// value of the appearance attribute.
 		if (!this.appearance) {
 			const appearanceValue = this.getAttribute("appearance");
+
 			this.appearance = appearanceValue as ButtonAppearance;
 		}
 	}

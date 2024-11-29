@@ -20,11 +20,14 @@ export const radioGroupStyles = (
 ) => css`
 	${display("flex")} :host {
 		align-items: flex-start;
+
 		margin: calc(${designUnit} * 1px) 0;
+
 		flex-direction: column;
 	}
 	.positioning-region {
 		display: flex;
+
 		flex-wrap: wrap;
 	}
 	:host([orientation="vertical"]) .positioning-region {
@@ -35,7 +38,9 @@ export const radioGroupStyles = (
 	}
 	::slotted([slot="label"]) {
 		color: ${foreground};
+
 		font-size: ${typeRampBaseFontSize};
+
 		margin: calc(${designUnit} * 1px) 0;
 	}
 `;

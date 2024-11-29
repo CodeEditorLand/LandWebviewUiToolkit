@@ -32,7 +32,9 @@ export class RadioGroup extends FoundationRadioGroup {
 
 		if (label) {
 			const id = "radio-group-" + Math.random().toString(16).slice(2);
+
 			label.setAttribute("id", id);
+
 			this.setAttribute("aria-labelledby", id);
 		}
 	}

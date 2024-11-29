@@ -13,8 +13,11 @@ export const dataGridStyles = (
 ) => css`
 	:host {
 		display: flex;
+
 		position: relative;
+
 		flex-direction: column;
+
 		width: 100%;
 	}
 `;

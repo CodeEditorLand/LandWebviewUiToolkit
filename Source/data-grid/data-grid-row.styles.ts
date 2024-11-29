@@ -20,21 +20,29 @@ export const dataGridRowStyles = (
 ) => css`
 	:host {
 		display: grid;
+
 		padding: calc((${designUnit} / 4) * 1px) 0;
+
 		box-sizing: border-box;
+
 		width: 100%;
+
 		background: transparent;
 	}
 	:host(.header) {
 	}
 	:host(.sticky-header) {
 		background: ${background};
+
 		position: sticky;
+
 		top: 0;
 	}
 	:host(:hover) {
 		background: ${listHoverBackground};
+
 		outline: 1px dotted ${contrastActiveBorder};
+
 		outline-offset: -1px;
 	}
 `;

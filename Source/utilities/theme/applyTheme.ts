@@ -16,6 +16,7 @@ export function initThemeChangeListener(
 		const observer = new MutationObserver(() => {
 			applyCurrentTheme(tokenMappings);
 		});
+
 		observer.observe(document.body, {
 			attributes: true,
 			attributeFilter: ["class"],

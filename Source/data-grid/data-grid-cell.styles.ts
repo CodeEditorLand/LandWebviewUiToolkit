@@ -27,16 +27,27 @@ export const dataGridCellStyles = (
 ) => css`
 	:host {
 		padding: calc(${designUnit} * 1px) calc(${designUnit} * 3px);
+
 		color: ${foreground};
+
 		opacity: 1;
+
 		box-sizing: border-box;
+
 		font-family: ${fontFamily};
+
 		font-size: ${typeRampBaseFontSize};
+
 		line-height: ${typeRampBaseLineHeight};
+
 		font-weight: 400;
+
 		border: solid calc(${borderWidth} * 1px) transparent;
+
 		border-radius: calc(${cornerRadius} * 1px);
+
 		white-space: wrap;
+
 		overflow-wrap: anywhere;
 	}
 	:host(.column-header) {
@@ -46,8 +57,11 @@ export const dataGridCellStyles = (
 	:host(:focus),
 	:host(:active) {
 		background: ${listActiveSelectionBackground};
+
 		border: solid calc(${borderWidth} * 1px) ${focusBorder};
+
 		color: ${listActiveSelectionForeground};
+
 		outline: none;
 	}
 	:host(:${focusVisible}) ::slotted(*),

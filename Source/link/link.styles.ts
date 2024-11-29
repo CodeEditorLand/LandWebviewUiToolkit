@@ -26,28 +26,48 @@ export const linkStyles = (
 ) => css`
 	${display("inline-flex")} :host {
 		background: transparent;
+
 		box-sizing: border-box;
+
 		color: ${linkForeground};
+
 		cursor: pointer;
+
 		fill: currentcolor;
+
 		font-family: ${fontFamily};
+
 		font-size: ${typeRampBaseFontSize};
+
 		line-height: ${typeRampBaseLineHeight};
+
 		outline: none;
 	}
 	.control {
 		background: transparent;
+
 		border: calc(${borderWidth} * 1px) solid transparent;
+
 		border-radius: calc(${cornerRadius} * 1px);
+
 		box-sizing: border-box;
+
 		color: inherit;
+
 		cursor: inherit;
+
 		fill: inherit;
+
 		font-family: inherit;
+
 		height: inherit;
+
 		padding: 0;
+
 		outline: none;
+
 		text-decoration: none;
+
 		word-break: break-word;
 	}
 	.control::-moz-focus-inner {
@@ -61,6 +81,7 @@ export const linkStyles = (
 	}
 	:host(:active) {
 		background: transparent;
+
 		color: ${linkActiveForeground};
 	}
 	:host(:${focusVisible}) .control,
