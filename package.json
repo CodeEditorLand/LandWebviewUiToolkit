@@ -5,7 +5,7 @@
 	"description": "A component library for building webview-based extensions in Visual Studio Code.",
 	"devDependencies": {},
 	"main": "dist/index.js",
-	"name": "@vscode/webview-ui-toolkit",
+	"name": "@codeeditorland/webview-ui-toolkit",
 	"scripts": {
 		"build": "rollup -c && tsc -p ./tsconfig.json && npm run doc && node ./scripts/move-react-build-dir.js",
 		"doc": "api-extractor run --local",
